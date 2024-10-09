@@ -1,0 +1,35 @@
+[2024-10-07T19:58:51.105+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-07T19:58:51.139+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: compl_cssnowflake.load_csv manual__2024-10-07T19:54:55.778140+00:00 [queued]>
+[2024-10-07T19:58:51.164+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: compl_cssnowflake.load_csv manual__2024-10-07T19:54:55.778140+00:00 [queued]>
+[2024-10-07T19:58:51.165+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2024-10-07T19:58:51.197+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): load_csv> on 2024-10-07 19:54:55.778140+00:00
+[2024-10-07T19:58:51.209+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=4818) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-07T19:58:51.213+0000] {standard_task_runner.py:72} INFO - Started process 4820 to run task
+[2024-10-07T19:58:51.213+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'compl_cssnowflake', 'load_csv', 'manual__2024-10-07T19:54:55.778140+00:00', '--job-id', '62', '--raw', '--subdir', 'DAGS_FOLDER/school/ty.py', '--cfg-path', '/tmp/tmpynfu_p7t']
+[2024-10-07T19:58:51.214+0000] {standard_task_runner.py:105} INFO - Job 62: Subtask load_csv
+[2024-10-07T19:58:51.297+0000] {task_command.py:467} INFO - Running <TaskInstance: compl_cssnowflake.load_csv manual__2024-10-07T19:54:55.778140+00:00 [running]> on host 67bc14123253
+[2024-10-07T19:58:51.486+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='seylow' AIRFLOW_CTX_DAG_ID='compl_cssnowflake' AIRFLOW_CTX_TASK_ID='load_csv' AIRFLOW_CTX_EXECUTION_DATE='2024-10-07T19:54:55.778140+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-07T19:54:55.778140+00:00'
+[2024-10-07T19:58:51.489+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-10-07T19:58:51.490+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-10-07T19:58:51.491+0000] {logging_mixin.py:190} INFO - Current task name:load_csv state:running start_date:2024-10-07 19:58:51.140804+00:00
+[2024-10-07T19:58:51.492+0000] {logging_mixin.py:190} INFO - Dag name:compl_cssnowflake and current dag run status:running
+[2024-10-07T19:58:51.493+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-07T19:58:51.514+0000] {ty.py:26} INFO - Loaded arts_class.csv successfully.
+[2024-10-07T19:58:51.526+0000] {ty.py:26} INFO - Loaded Business_class.csv successfully.
+[2024-10-07T19:58:51.543+0000] {ty.py:26} INFO - Loaded Science_class.csv successfully.
+[2024-10-07T19:58:51.561+0000] {ty.py:26} INFO - Loaded survey.csv successfully.
+[2024-10-07T19:58:51.610+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-10-07T19:58:51.625+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-07T19:58:51.626+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=compl_cssnowflake, task_id=load_csv, run_id=manual__2024-10-07T19:54:55.778140+00:00, execution_date=20241007T195455, start_date=20241007T195851, end_date=20241007T195851
+[2024-10-07T19:58:51.645+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-10-07T19:58:51.646+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-10-07T19:58:51.647+0000] {logging_mixin.py:190} INFO - Dag name:compl_cssnowflake queued_at:2024-10-07 19:58:46.418218+00:00
+[2024-10-07T19:58:51.647+0000] {logging_mixin.py:190} INFO - Task hostname:67bc14123253 operator:PythonOperator
+[2024-10-07T19:58:51.672+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-07T19:58:51.699+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py:1378: AirflowProviderDeprecationWarning: Call to deprecated class SnowflakeOperator. (This class is deprecated. Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`. Also, you can provide `hook_params={'warehouse': <warehouse>, 'database': <database>, 'role': <role>, 'schema': <schema>, 'authenticator': <authenticator>,'session_parameters': <session_parameters>}`.)
+  result = cls.__new__(cls)
+
+[2024-10-07T19:58:51.744+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-07T19:58:51.751+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
