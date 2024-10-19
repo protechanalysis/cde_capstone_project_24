@@ -1,0 +1,68 @@
+[2024-10-19T15:15:46.224+0000] {processor.py:186} INFO - Started process (PID=68) to work on /opt/airflow/dags/notification/email.py
+[2024-10-19T15:15:46.227+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/notification/email.py for tasks to queue
+[2024-10-19T15:15:46.233+0000] {logging_mixin.py:190} INFO - [2024-10-19T15:15:46.233+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/notification/email.py
+[2024-10-19T15:15:46.348+0000] {logging_mixin.py:190} INFO - [2024-10-19T15:15:46.332+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/notification/email.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/notification/email.py", line 21, in <module>
+    "environment": Variable.get("environment"),
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/variable.py", line 145, in get
+    raise KeyError(f"Variable {key} does not exist")
+KeyError: 'Variable environment does not exist'
+[2024-10-19T15:15:46.354+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/notification/email.py
+[2024-10-19T15:15:46.646+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/notification/email.py took 0.437 seconds
+[2024-10-19T15:16:17.731+0000] {processor.py:186} INFO - Started process (PID=78) to work on /opt/airflow/dags/notification/email.py
+[2024-10-19T15:16:17.734+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/notification/email.py for tasks to queue
+[2024-10-19T15:16:17.739+0000] {logging_mixin.py:190} INFO - [2024-10-19T15:16:17.738+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/notification/email.py
+[2024-10-19T15:16:17.803+0000] {logging_mixin.py:190} INFO - [2024-10-19T15:16:17.794+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/notification/email.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/notification/email.py", line 21, in <module>
+    "environment": Variable.get("environment"),
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/variable.py", line 145, in get
+    raise KeyError(f"Variable {key} does not exist")
+KeyError: 'Variable environment does not exist'
+[2024-10-19T15:16:17.806+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/notification/email.py
+[2024-10-19T15:16:17.826+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/notification/email.py took 0.111 seconds
+[2024-10-19T15:16:48.618+0000] {processor.py:186} INFO - Started process (PID=90) to work on /opt/airflow/dags/notification/email.py
+[2024-10-19T15:16:48.620+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/notification/email.py for tasks to queue
+[2024-10-19T15:16:48.627+0000] {logging_mixin.py:190} INFO - [2024-10-19T15:16:48.626+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/notification/email.py
+[2024-10-19T15:16:48.684+0000] {logging_mixin.py:190} INFO - [2024-10-19T15:16:48.678+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/notification/email.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/notification/email.py", line 21, in <module>
+    "environment": Variable.get("environment"),
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/variable.py", line 145, in get
+    raise KeyError(f"Variable {key} does not exist")
+KeyError: 'Variable environment does not exist'
+[2024-10-19T15:16:48.686+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/notification/email.py
+[2024-10-19T15:16:48.707+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/notification/email.py took 0.101 seconds
+[2024-10-19T15:17:18.858+0000] {processor.py:186} INFO - Started process (PID=100) to work on /opt/airflow/dags/notification/email.py
+[2024-10-19T15:17:18.860+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/notification/email.py for tasks to queue
+[2024-10-19T15:17:18.865+0000] {logging_mixin.py:190} INFO - [2024-10-19T15:17:18.865+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/notification/email.py
+[2024-10-19T15:17:18.928+0000] {logging_mixin.py:190} INFO - [2024-10-19T15:17:18.921+0000] {dagbag.py:386} ERROR - Failed to import: /opt/airflow/dags/notification/email.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 382, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/notification/email.py", line 21, in <module>
+    "environment": Variable.get("environment"),
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/variable.py", line 145, in get
+    raise KeyError(f"Variable {key} does not exist")
+KeyError: 'Variable environment does not exist'
+[2024-10-19T15:17:18.931+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/notification/email.py
+[2024-10-19T15:17:18.963+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/notification/email.py took 0.116 seconds
