@@ -5,7 +5,7 @@ from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python_operator import PythonOperator
 from airflow.hooks.postgres_hook import PostgresHook
 
-from function_csv.test import create_postgres_table, load_csv_to_database
+from dags.function_csv.database_function import create_postgres_table, load_csv_to_database
 
 # setting bash scripts path
 wik1 = 'bash /opt/airflow/dags/bash_scripts/wiki_log_file.sh '
