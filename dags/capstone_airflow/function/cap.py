@@ -1,6 +1,5 @@
 import logging
 
-
 import awswrangler as wr
 import boto3
 import pandas as pd
