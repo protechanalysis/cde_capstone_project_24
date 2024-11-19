@@ -1,5 +1,5 @@
-rou
-logs
+rou/*
+logs/*
 readme.md
 terraform/*
 dbt_postgres/*
