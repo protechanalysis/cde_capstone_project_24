@@ -17,17 +17,17 @@ from capstone_airflow.function.cap import (
     renaming_column,
 )
 
-default_args = {
-    'owner': 'adewunmi',
-    'depends_on_past': False,
-    'retries': 2,
-    'retry_delay': timedelta(minutes=5),
-}
+default_args = {'owner': 'adewunmi',
+        'depends_on_past': False,
+        'retries': 2,
+        'retry_delay': timedelta(minutes=5)
+        }
 
-with DAG(dag_id='capstone',
-        default_args=default_args,
-        start_date=datetime(2024, 11, 17),
-        schedule_interval=None
+with DAG(
+    dag_id='capstone',
+    start_date=datetime(2024, 11, 17),
+    default_args=default_args,
+    schedule_interval=None
 ) as dag:
     
     
@@ -71,7 +71,6 @@ with DAG(dag_id='capstone',
         python_callable = tables_joining
     ) 
 
-
     transformation = PythonOperator(
         task_id= "table_tansformation",
         python_callable = table_transformation
@@ -87,13 +86,7 @@ with DAG(dag_id='capstone',
         python_callable = load_to_database
     )
 
-    # download_csv = PythonOperator(
-    #     task_id= "down_cs",
-    #     python_callable = doen_load
-    # )
-
 get_request >> write_to_s3 >> read_from_s3
 read_from_s3 >> [column_required, code_symbol, currency_name, languages]
 [column_required, code_symbol, currency_name, languages] >> together
 together >> transformation  >> renaming >> load_to_postgres
-# transformation >> [back_s3, download_csv]
