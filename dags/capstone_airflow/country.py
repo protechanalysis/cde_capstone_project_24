@@ -1,18 +1,28 @@
+from datetime import datetime, timedelta
+
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 
+from capstone_airflow.function.cap import (
+    read_s3_parquet,
+    table_transformation,
+    tables_joining,
+    load_to_database,
+    column_selections,
+    country_to_s3_parquet,
+    country_api_request,
+    extract_currency_code_symbol,
+    extract_currency_name,
+    extract_languages,
+    renaming_column,
+)
 
-from datetime import datetime, timedelta
-from capstone_airflow.function.cap import (read_s3_parquet, table_transformation, tables_joining, load_to_database,
-                 column_selections, country_to_s3_parquet, country_api_request, extract_currency_code_symbol,
-                 extract_currency_name, extract_languages, renaming_column)
-
-
-default_args = {'owner': 'adewunmi',
-        'depends_on_past': False,
-        'retries': 2,
-        'retry_delay': timedelta(minutes=5)
-        }
+default_args = {
+    'owner': 'adewunmi',
+    'depends_on_past': False,
+    'retries': 2,
+    'retry_delay': timedelta(minutes=5),
+}
 
 with DAG(dag_id='capstone',
         default_args=default_args,
