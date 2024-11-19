@@ -1,16 +1,12 @@
-import requests
 import logging
 
-import pandas as pd
-# import pyarrow as pa
-# import pyarrow.parquet as pq
 
 import awswrangler as wr
 import boto3
-
+import pandas as pd
+import requests
 from airflow.models import Variable
 from airflow.providers.postgres.hooks.postgres import PostgresHook
-
 
 logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
 

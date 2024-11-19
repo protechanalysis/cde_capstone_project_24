@@ -30,47 +30,41 @@ with DAG(dag_id='capstone',
         schedule_interval=None
 ) as dag:
     
+    
     get_request = PythonOperator(
         task_id="get_request_api",
         python_callable= country_api_request
     )
-
 
     write_to_s3  = PythonOperator(
         task_id = "object_datalake",
         python_callable= country_to_s3_parquet
     )
 
-
     read_from_s3 = PythonOperator(
         task_id= "read_from_datalake",
         python_callable = read_s3_parquet
     )
-
 
     column_required = PythonOperator(
         task_id= "filter_column",
         python_callable = column_selections
     )
 
-
     code_symbol = PythonOperator(
         task_id= "currency_code_sym",
         python_callable = extract_currency_code_symbol
     )   
-
 
     currency_name = PythonOperator(
         task_id= "currency_name",
         python_callable = extract_currency_name
     )
 
-
     languages = PythonOperator(
         task_id= "language",
         python_callable = extract_languages
     )
-
 
     together = PythonOperator(
         task_id= "tables_joining",
