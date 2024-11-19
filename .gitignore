@@ -3,4 +3,4 @@ logs/*
 readme.md
 terraform/*
 dbt_postgres/*
-.env
+*env*
