@@ -4,13 +4,13 @@ from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 
 from function.capstone_function import (column_selections, country_api_request,
-                                    country_to_s3_parquet,
-                                    extract_currency_code_symbol,
-                                    extract_currency_name,
-                                    extract_languages, load_to_database,
-                                    read_s3_parquet, renaming_column,
-                                    table_transformation, tables_joining
-                                    )
+                                        country_to_s3_parquet,
+                                        extract_currency_code_symbol,
+                                        extract_currency_name,
+                                        extract_languages, load_to_database,
+                                        read_s3_parquet, renaming_column,
+                                        table_transformation, tables_joining
+                                        )
 
 default_args = {
     'owner': 'adewunmi',
