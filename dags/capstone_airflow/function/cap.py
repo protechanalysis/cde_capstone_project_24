@@ -7,7 +7,7 @@ import requests
 from airflow.models import Variable
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 
-logging.basicConfig(format="%(asctime)s %(message)s", datefmt="%m/%d/%Y %I:%M:%S %p")
+logging.basicConfig(format="%(asctime)s %(message)s")
 
 
 def country_api_request():
@@ -67,7 +67,8 @@ def aws_session():
 
 def country_to_s3_parquet():
     """
-    This function fetches country data, processes it, and writes it to S3 in Parquet format.
+    This function fetches country data, processes it,
+    and writes it to S3 in Parquet format.
     """
     try:
         # Fetch the country data (ensure this is a pandas DataFrame)
@@ -91,10 +92,10 @@ def country_to_s3_parquet():
         raise Exception(f"An error occurred: {str(e)}")
 
 
-
 def read_s3_parquet():
     """
-    This function reads a Parquet file from S3 and returns the result as a Pandas DataFrame.
+    This function reads a Parquet file from S3,
+    and returns the result as a Pandas DataFrame.
     """
     try:
         # Attempt to read the parquet file from S3
@@ -119,7 +120,8 @@ def read_s3_parquet():
 def column_selections():
     """
     This function selects the required columns from the S3 data.
-    It first reads the data from the Parquet file in S3 and then selects specific columns.
+    It first reads the data from the Parquet file in S3,
+    and then selects specific columns.
     If any columns are missing, it handles the error gracefully.
     """
     try:
@@ -166,7 +168,8 @@ def column_selections():
 
 def extract_currency_code_symbol():
     """
-    This function extracts the currency code and symbol from the country_read function.
+    This function extracts the currency code,
+    and symbol from the country_read function.
     """
     try:
         logging.info("Starting currency extraction process.")
@@ -213,7 +216,7 @@ def extract_currency_code_symbol():
         syms["currency_code"] = syms["currency_code"].str.split(".").str[1]
 
         # Group by country name and aggregate the symbols and codes
-        logging.info("Grouping by country and aggregating currency symbols and codes.")
+        logging.info("Grouping by country & aggregating by symbols and codes.")
         sym_combine = (
             syms.groupby("name.common")
             .agg(
@@ -235,7 +238,8 @@ def extract_currency_code_symbol():
 def extract_currency_name():
     """
     This function extracts the currency name from the country_read function.
-    It reads data from S3, filters the relevant currency columns, processes them, and returns the results.
+    It reads data from S3, filters the relevant currency columns,
+    processes them, and returns the results.
     """
     try:
         logging.info("Starting currency name extraction process.")
@@ -288,8 +292,10 @@ def extract_currency_name():
 
 def extract_languages():
     """
-    This function extracts country language information from the country_read function.
-    It reads data from S3, processes the relevant language columns, and returns the result.
+    This function extracts country language information from
+    the country_read function.
+    It reads data from S3, processes the relevant language columns,
+    and returns the result.
     """
     try:
         logging.info("Starting language extraction process.")
@@ -312,7 +318,8 @@ def extract_languages():
 
         # Melt the data to extract language names
         logging.info("Melting data to extract languages.")
-        language_code = language.melt(id_vars=["name.common"], value_name="languages")
+        language_code = language.melt(id_vars=["name.common"],
+                                      value_name="languages")
 
         # Remove rows with null values in 'languages'
         logging.info("Removing rows with null language values.")
@@ -340,8 +347,10 @@ def extract_languages():
 
 def tables_joining():
     """
-    This function joins multiple data tables (country information, currency data, and language data).
-    It first selects columns, then joins the data from multiple sources and returns the combined table.
+    This function joins multiple data tables (country information,
+    currency data, and language data).
+    It first selects columns, then joins the data from multiple sources
+    and returns the combined table.
     """
     try:
         logging.info("Starting the table joining process.")
@@ -354,9 +363,10 @@ def tables_joining():
 
         # Perform the joins
         logging.info("Joining tables.")
-        
+
         country_currency = pd.merge(
-            country_column_select, currency_code_symbol, on="name.common", how="right"
+            country_column_select, currency_code_symbol, on="name.common",
+            how="right"
         )
         country_currency_name = pd.merge(
             country_currency, currency_name, on="name.common", how="right"
@@ -411,7 +421,7 @@ def table_transformation():
             else:
                 logging.warning(f"Column {col} not found in the data.")
 
-        # Create the 'country_code' column by combining 'idd.root' and 'idd.suffixes'
+        # Create the 'country_code' column by combining 'idd root and suffixes'
         if (
             "idd.root" in country_join.columns
             and "idd.suffixes" in country_join.columns
@@ -422,10 +432,10 @@ def table_transformation():
             logging.info("'country_code' column created successfully.")
         else:
             logging.warning(
-                "Columns 'idd.root' or 'idd.suffixes' not found to create 'country_code'."
+                "Columns idd.root/suffixes not found to create country_code."
             )
 
-        # Drop the 'idd.root' and 'idd.suffixes' columns as they are no longer needed
+        # Drop the 'idd root and suffixes' columns as they are no longer needed
         country_transform = country_join.drop(
             columns=["idd.root", "idd.suffixes"], errors="ignore"
         )
@@ -441,7 +451,8 @@ def table_transformation():
 def renaming_column():
     """
     This function renames specific columns in a DataFrame.
-    It ensures proper logging and handles exceptions during the renaming process.
+    It ensures proper logging and handles exceptions during
+    the renaming process.
     """
     try:
         logging.info("Starting the column renaming process.")
@@ -480,7 +491,8 @@ def renaming_column():
 def load_to_database():
     """
     This function loads a DataFrame into a PostgreSQL database.
-    It uses Airflow's PostgresHook to connect to the database and SQLAlchemy for data insertion.
+    It uses Airflow's PostgresHook to connect to the database
+    and SQLAlchemy for data insertion.
     """
     try:
         logging.info("Starting the database load process.")
@@ -491,7 +503,7 @@ def load_to_database():
             return None, "Error: The DataFrame is empty or None."
 
         logging.info(
-            "DataFrame validation successful. Proceeding to database connection."
+            "DataFrame validation successful. database connection next."
         )
 
         # Connect to PostgreSQL using Airflow's PostgresHook
@@ -502,7 +514,7 @@ def load_to_database():
         table_name = "country_data"  # Replace with your target table name
 
         logging.info(
-            f"Loading data into the table '{table_name}' in the PostgreSQL database."
+            f"Loading data into the table '{table_name}' in the database."
         )
 
         # Load the DataFrame into the PostgreSQL table
@@ -513,7 +525,8 @@ def load_to_database():
             index=False,  # Do not include the DataFrame's index as a column
         )
 
-        logging.info(f"Data successfully loaded into the table '{table_name}'.")
+        logging.info(f"Data successfully loaded into the \
+                     table '{table_name}'.")
         return "Data loaded successfully."
 
     except Exception as e:

@@ -4,19 +4,18 @@ from airflow import DAG
 from airflow.providers.postgres.operators.postgres import PostgresOperator
 
 default_args = {'owner': 'adewunmi',
-        'depends_on_past': False,
-        'retries': 2,
-        'retry_delay': timedelta(minutes=5)
-        }
+                'depends_on_past': False,
+                'retries': 2,
+                'retry_delay': timedelta(minutes=5)
+                }
 
 
 with DAG(
     dag_id="create_country_table",
     start_date=datetime(2024, 11, 18),
-    default_args = default_args,
+    default_args=default_args,
     schedule_interval=None
 ) as dag:
-
 
     create_postgres_table = PostgresOperator(
         task_id="create_postgres_table",
