@@ -318,7 +318,8 @@ def extract_languages():
 
         # Melt the data to extract language names
         logging.info("Melting data to extract languages.")
-        language_code = language.melt(id_vars=["name.common"], value_name="languages")
+        language_code = language.melt(id_vars=["name.common"],
+                                      value_name="languages")
 
         # Remove rows with null values in 'languages'
         logging.info("Removing rows with null language values.")
@@ -364,7 +365,8 @@ def tables_joining():
         logging.info("Joining tables.")
 
         country_currency = pd.merge(
-            country_column_select, currency_code_symbol, on="name.common", how="right"
+            country_column_select, currency_code_symbol, on="name.common",
+            how="right"
         )
         country_currency_name = pd.merge(
             country_currency, currency_name, on="name.common", how="right"
@@ -500,7 +502,8 @@ def load_to_database():
             logging.error("The DataFrame is empty or None.")
             return None, "Error: The DataFrame is empty or None."
 
-        logging.info("DataFrame validation successful. database connection next.")
+        logging.info("DataFrame validation successful. \
+                     Database connection next.")
 
         # Connect to PostgreSQL using Airflow's PostgresHook
         postgres_hook = PostgresHook(postgres_conn_id="rds_connect")
@@ -509,7 +512,8 @@ def load_to_database():
         # Define table name
         table_name = "country_data"  # Replace with your target table name
 
-        logging.info(f"Loading data into the table '{table_name}' in the database.")
+        logging.info(f"Loading data into the table '{table_name}' \
+                     in the database.")
 
         # Load the DataFrame into the PostgreSQL table
         data.to_sql(

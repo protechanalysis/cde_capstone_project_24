@@ -87,3 +87,4 @@ if __name__ == "__main__":
         country_to_s3_parquet()
     except Exception as main_exception:
         logging.critical(f"Pipeline failed: {main_exception}")
+        
