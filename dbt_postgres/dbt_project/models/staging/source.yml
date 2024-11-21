@@ -1,0 +1,41 @@
+version: 2
+
+sources:
+  - name: public
+    tables:
+      - name: country_data
+        columns:
+          - name: independence
+            data_type: boolean
+          - name: country_name
+            data_type: text
+          - name: united_nation_members
+            data_type: boolean
+          - name: start_of_week        
+            data_type: text
+          - name: official_country_name
+            data_type: text
+          - name: common_native_name   
+            data_type: text
+          - name: capital
+            data_type: text
+          - name: region
+            data_type: text
+          - name: area
+            data_type: double precision
+          - name: population
+            data_type: bigint
+          - name: continents
+            data_type: text
+          - name: subregion
+            data_type: text
+          - name: currency_symbol
+            data_type: text
+          - name: currency_code
+            data_type: text
+          - name: currency_name
+            data_type: text
+          - name: languages
+            data_type: text
+          - name: country_code
+            data_type: text

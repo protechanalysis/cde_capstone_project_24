@@ -1,6 +1,6 @@
 rou/*
-logs/*
+*logs/*
 readme.md
-terraform/*
-dbt_postgres/*
+terraform/*terraform*
+dbt_postgres/capstone_dbt/*
 *env*

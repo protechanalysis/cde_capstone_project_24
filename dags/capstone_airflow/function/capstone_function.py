@@ -221,8 +221,8 @@ def extract_currency_code_symbol():
             syms.groupby("name.common")
             .agg(
                 {
-                    "currency_symbol": lambda x: ",".join(x),
-                    "currency_code": lambda x: ",".join(x),
+                    "currency_symbol": lambda x: ", ".join(x),
+                    "currency_code": lambda x: ", ".join(x),
                 }
             )
             .reset_index()
