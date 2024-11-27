@@ -1,7 +1,6 @@
 import logging
 
 import pandas as pd
-
 from capstone_airflow.function.extract_columns import column_selections
 from capstone_airflow.function.extract_currency import (currency_code_symbol,
                                                         currency_name)

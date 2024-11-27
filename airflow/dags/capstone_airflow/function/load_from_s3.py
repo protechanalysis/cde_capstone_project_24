@@ -1,7 +1,6 @@
 import logging
 
 import awswrangler as wr
-
 from capstone_airflow.function.extract_load_to_s3 import aws_session
 
 logging.basicConfig(format="%(asctime)s %(message)s")
