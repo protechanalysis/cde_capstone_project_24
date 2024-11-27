@@ -1,6 +1,7 @@
 import logging
 
 import pandas as pd
+
 from capstone_airflow.function.load_from_s3 import read_s3_parquet
 
 
@@ -126,4 +127,3 @@ def currency_name():
 
     except Exception as e:
         raise Exception(f"Error during currency name extraction: {str(e)}")
-    

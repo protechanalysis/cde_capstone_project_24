@@ -1,6 +1,7 @@
 import logging
 
 from airflow.providers.postgres.hooks.postgres import PostgresHook
+
 from capstone_airflow.function.transformation import table_transformation
 
 
