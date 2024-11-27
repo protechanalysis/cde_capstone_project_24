@@ -22,7 +22,7 @@ def task_fail_alert(context):
     email_receiver = Variable.get('email_receiver')
 
     print(context)
-    subject = f"task {task} in dag {dag} failed"
+    subject = f"task {task} of {state} in dag {dag} failed"
     body = f'''
     Hey {dag_owner}
 
