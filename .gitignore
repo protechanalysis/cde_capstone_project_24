@@ -8,3 +8,4 @@ dbt_postgres/capstone_dbt/*
 logs/*
 dbt_postgres/dbt_project/target/*
 airflow/logs*
+extract_docker*
