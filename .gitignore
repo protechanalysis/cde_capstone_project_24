@@ -7,4 +7,4 @@ dbt_postgres/capstone_dbt/*
 *env*
 logs/*
 dbt_postgres/dbt_project/target/*
-airflow/logs/*
+airflow/logs*
