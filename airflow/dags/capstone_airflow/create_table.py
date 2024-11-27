@@ -1,5 +1,4 @@
 from datetime import datetime, timedelta
-
 from airflow.providers.postgres.operators.postgres import PostgresOperator
 
 default_args = {'owner': 'adewunmi',

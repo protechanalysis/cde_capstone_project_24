@@ -1,6 +1,5 @@
 from datetime import datetime, timedelta
-
-from airflow.operators.python_operator import PythonOperator 
+from airflow.operators.python_operator import PythonOperator
 from capstone_airflow.function.data_to_database import load_to_database
 from capstone_airflow.function.extract_columns import column_selections
 from capstone_airflow.function.extract_currency import (currency_code_symbol,
