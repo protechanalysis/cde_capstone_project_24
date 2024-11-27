@@ -1,0 +1,41 @@
+[2024-11-20T23:37:32.074+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-20T23:37:32.151+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: capstone.currency_name manual__2024-11-20T23:36:46.718095+00:00 [queued]>
+[2024-11-20T23:37:32.230+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: capstone.currency_name manual__2024-11-20T23:36:46.718095+00:00 [queued]>
+[2024-11-20T23:37:32.235+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 3
+[2024-11-20T23:37:32.517+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): currency_name> on 2024-11-20 23:36:46.718095+00:00
+[2024-11-20T23:37:32.555+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=199) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-20T23:37:32.579+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'capstone', 'currency_name', 'manual__2024-11-20T23:36:46.718095+00:00', '--job-id', '85', '--raw', '--subdir', 'DAGS_FOLDER/capstone_***/country.py', '--cfg-path', '/tmp/tmpjvnsj7ks']
+[2024-11-20T23:37:32.601+0000] {standard_task_runner.py:72} INFO - Started process 208 to run task
+[2024-11-20T23:37:32.616+0000] {standard_task_runner.py:105} INFO - Job 85: Subtask currency_name
+[2024-11-20T23:37:32.785+0000] {task_command.py:467} INFO - Running <TaskInstance: capstone.currency_name manual__2024-11-20T23:36:46.718095+00:00 [running]> on host e9fd75a7ea89
+[2024-11-20T23:37:33.074+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='adewunmi' AIRFLOW_CTX_DAG_ID='capstone' AIRFLOW_CTX_TASK_ID='currency_name' AIRFLOW_CTX_EXECUTION_DATE='2024-11-20T23:36:46.718095+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-20T23:36:46.718095+00:00'
+[2024-11-20T23:37:33.080+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-20T23:37:33.131+0000] {capstone_function.py:245} INFO - Starting currency name extraction process.
+[2024-11-20T23:37:44.249+0000] {capstone_function.py:110} INFO - Successfully read Parquet file from S3.
+[2024-11-20T23:37:44.251+0000] {capstone_function.py:255} INFO - Data loaded successfully from S3.
+[2024-11-20T23:37:44.252+0000] {capstone_function.py:258} INFO - Filtering country names and currency name columns.
+[2024-11-20T23:37:44.294+0000] {capstone_function.py:264} INFO - Melting data to extract currency names.
+[2024-11-20T23:37:44.336+0000] {capstone_function.py:270} INFO - Removing rows with null currency names.
+[2024-11-20T23:37:44.389+0000] {capstone_function.py:279} INFO - Grouping by country and aggregating currency names.
+[2024-11-20T23:37:44.421+0000] {capstone_function.py:286} INFO - Currency name extraction completed successfully.
+[2024-11-20T23:37:44.428+0000] {python.py:240} INFO - Done. Returned value was:         name.common                                      currency_name
+0       Afghanistan                                     Afghan afghani
+1           Albania                                       Albanian lek
+2           Algeria                                     Algerian dinar
+3    American Samoa                               United States dollar
+4           Andorra                                               Euro
+..              ...                                                ...
+242  Western Sahara  Moroccan dirham, Algerian dinar, Mauritanian o...
+243           Yemen                                        Yemeni rial
+244          Zambia                                     Zambian kwacha
+245        Zimbabwe                                  Zimbabwean dollar
+246   Åland Islands                                               Euro
+
+[247 rows x 2 columns]
+[2024-11-20T23:37:44.498+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-20T23:37:44.499+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=capstone, task_id=currency_name, run_id=manual__2024-11-20T23:36:46.718095+00:00, execution_date=20241120T233646, start_date=20241120T233732, end_date=20241120T233744
+[2024-11-20T23:37:44.557+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-20T23:37:44.596+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-20T23:37:44.601+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

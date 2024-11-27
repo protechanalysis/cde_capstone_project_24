@@ -1,0 +1,30 @@
+[2024-11-02T13:14:50.372+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-02T13:14:50.396+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: bas.bash_task manual__2024-11-02T13:07:38.357667+00:00 [queued]>
+[2024-11-02T13:14:50.408+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: bas.bash_task manual__2024-11-02T13:07:38.357667+00:00 [queued]>
+[2024-11-02T13:14:50.409+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 4
+[2024-11-02T13:14:50.432+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): bash_task> on 2024-11-02 13:07:38.357667+00:00
+[2024-11-02T13:14:50.440+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=202) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-02T13:14:50.442+0000] {standard_task_runner.py:72} INFO - Started process 203 to run task
+[2024-11-02T13:14:50.442+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'bas', 'bash_task', 'manual__2024-11-02T13:07:38.357667+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/templatin/template.py', '--cfg-path', '/tmp/tmp55fyhj7_']
+[2024-11-02T13:14:50.444+0000] {standard_task_runner.py:105} INFO - Job 7: Subtask bash_task
+[2024-11-02T13:14:50.507+0000] {task_command.py:467} INFO - Running <TaskInstance: bas.bash_task manual__2024-11-02T13:07:38.357667+00:00 [running]> on host fe3e688f2b29
+[2024-11-02T13:14:50.618+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='adewunmi' AIRFLOW_CTX_DAG_ID='bas' AIRFLOW_CTX_TASK_ID='bash_task' AIRFLOW_CTX_EXECUTION_DATE='2024-11-02T13:07:38.357667+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-02T13:07:38.357667+00:00'
+[2024-11-02T13:14:50.620+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-02T13:14:50.641+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-11-02T13:14:50.642+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'bash /opt/***/dags/templatin/wiki.sh ']
+[2024-11-02T13:14:50.654+0000] {subprocess.py:86} INFO - Output:
+[2024-11-02T13:14:50.672+0000] {subprocess.py:93} INFO - /opt/***/dags/templatin/wiki.sh: line 10: ${{ execution_date }}: bad substitution
+[2024-11-02T13:14:50.681+0000] {subprocess.py:93} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2024-11-02T13:14:50.682+0000] {subprocess.py:93} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2024-11-02T13:16:16.370+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2024-11-02T13:16:16.372+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-11-02T13:16:16.374+0000] {process_utils.py:132} INFO - Sending 15 to group 203. PIDs of all processes in the group: [205, 210, 203]
+[2024-11-02T13:16:16.375+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 203
+[2024-11-02T13:16:16.376+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-11-02T13:16:16.376+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2024-11-02T13:16:16.380+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=210, status='terminated', started='13:14:50') (210) terminated with exit code None
+[2024-11-02T13:16:16.451+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-02T13:16:16.482+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=205, status='terminated', started='13:14:50') (205) terminated with exit code None
+[2024-11-02T13:16:16.482+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=203, status='terminated', exitcode=0, started='13:14:50') (203) terminated with exit code 0

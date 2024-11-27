@@ -1,0 +1,177 @@
+[2024-10-08T07:52:25.043+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-08T07:52:25.141+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: student_result.arts_assessment scheduled__2024-10-07T00:00:00+00:00 [queued]>
+[2024-10-08T07:52:25.219+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: student_result.arts_assessment scheduled__2024-10-07T00:00:00+00:00 [queued]>
+[2024-10-08T07:52:25.220+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-08T07:52:25.310+0000] {taskinstance.py:2888} INFO - Executing <Task(SnowflakeOperator): arts_assessment> on 2024-10-07 00:00:00+00:00
+[2024-10-08T07:52:25.321+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1120) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-08T07:52:25.353+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'student_result', 'arts_assessment', 'scheduled__2024-10-07T00:00:00+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/school/student.py', '--cfg-path', '/tmp/tmprzumfk8m']
+[2024-10-08T07:52:25.386+0000] {standard_task_runner.py:105} INFO - Job 25: Subtask arts_assessment
+[2024-10-08T07:52:25.366+0000] {standard_task_runner.py:72} INFO - Started process 1133 to run task
+[2024-10-08T07:52:25.684+0000] {task_command.py:467} INFO - Running <TaskInstance: student_result.arts_assessment scheduled__2024-10-07T00:00:00+00:00 [running]> on host 76e395cea755
+[2024-10-08T07:52:26.025+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='student' AIRFLOW_CTX_DAG_ID='student_result' AIRFLOW_CTX_TASK_ID='arts_assessment' AIRFLOW_CTX_EXECUTION_DATE='2024-10-07T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-07T00:00:00+00:00'
+[2024-10-08T07:52:26.027+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-10-08T07:52:26.028+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-10-08T07:52:26.029+0000] {logging_mixin.py:190} INFO - Current task name:arts_assessment state:running start_date:2024-10-08 07:52:25.146534+00:00
+[2024-10-08T07:52:26.030+0000] {logging_mixin.py:190} INFO - Dag name:student_result and current dag run status:running
+[2024-10-08T07:52:26.031+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-08T07:52:26.032+0000] {sql.py:266} INFO - Executing: 
+        CREATE OR REPLACE TEMPORARY TABLE temp_arts_class AS
+            SELECT * FROM school.data_schema.arts_class WHERE 1 = 0;  -- Create an empty table with the same structure as the target
+
+        COPY INTO temp_arts_class
+        FROM @school.data_schema.student
+        PATTERN = 'arts_class.csv'
+        FILE_FORMAT = csv_format;
+
+        MERGE INTO school.data_schema.arts_class AS target
+        USING temp_arts_class AS source
+        ON target.student_id = source.student_id  -- Match based on the unique identifier, like student_id
+        WHEN NOT MATCHED THEN
+        INSERT (student_id, Maths_score, English_score, Civic_education_score, Economics_score, Government_score,
+          CRS_score, Lit_in_Eng_score, Yoruba_score, History_score, Total_Grade_Points, Average_Score)
+        VALUES (source.student_id, source.Maths_score, source.English_score, source.Civic_education_score,
+          source.Economics_score, source.Government_score, source.CRS_score, source.Lit_in_Eng_score, source.Yoruba_score, source.History_score, source.Total_Grade_Points, source.Average_Score);
+
+        DROP TABLE temp_arts_class;
+        
+[2024-10-08T07:52:26.060+0000] {base.py:84} INFO - Retrieving connection 'secondary'
+[2024-10-08T07:52:26.175+0000] {base.py:84} INFO - Retrieving connection 'secondary'
+[2024-10-08T07:52:26.178+0000] {connection.py:413} INFO - Snowflake Connector for Python Version: 3.12.1, Python Version: 3.12.5, Platform: Linux-5.15.153.1-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[2024-10-08T07:52:26.180+0000] {connection.py:1196} INFO - Connecting to GLOBAL Snowflake domain
+[2024-10-08T07:52:26.181+0000] {connection.py:1277} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-10-08T07:52:29.715+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2024-10-08T07:52:29.716+0000] {sql.py:509} INFO - Running statement: CREATE OR REPLACE TEMPORARY TABLE temp_arts_class AS
+            SELECT * FROM school.data_schema.arts_class WHERE 1 = 0;  -- Create an empty table with the same structure as the target, parameters: None
+[2024-10-08T07:52:30.519+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2024-10-08T07:52:30.520+0000] {sql.py:518} INFO - Rows affected: 1
+[2024-10-08T07:52:30.522+0000] {snowflake.py:422} INFO - Rows affected: 1
+[2024-10-08T07:52:30.523+0000] {snowflake.py:423} INFO - Snowflake query id: 01b78c58-0001-5f37-0000-0001e512e7b1
+[2024-10-08T07:52:30.524+0000] {sql.py:509} INFO - Running statement: COPY INTO temp_arts_class
+        FROM @school.data_schema.student
+        PATTERN = 'arts_class.csv'
+        FILE_FORMAT = csv_format;, parameters: None
+[2024-10-08T07:52:32.522+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2024-10-08T07:52:32.523+0000] {sql.py:518} INFO - Rows affected: 1
+[2024-10-08T07:52:32.524+0000] {snowflake.py:422} INFO - Rows affected: 1
+[2024-10-08T07:52:32.524+0000] {snowflake.py:423} INFO - Snowflake query id: 01b78c58-0001-6110-0000-0001e512fc45
+[2024-10-08T07:52:32.525+0000] {sql.py:509} INFO - Running statement: MERGE INTO school.data_schema.arts_class AS target
+        USING temp_arts_class AS source
+        ON target.student_id = source.student_id  -- Match based on the unique identifier, like student_id
+        WHEN NOT MATCHED THEN
+        INSERT (student_id, Maths_score, English_score, Civic_education_score, Economics_score, Government_score,
+          CRS_score, Lit_in_Eng_score, Yoruba_score, History_score, Total_Grade_Points, Average_Score)
+        VALUES (source.student_id, source.Maths_score, source.English_score, source.Civic_education_score,
+          source.Economics_score, source.Government_score, source.CRS_score, source.Lit_in_Eng_score, source.Yoruba_score, source.History_score, source.Total_Grade_Points, source.Average_Score);, parameters: None
+[2024-10-08T07:52:32.731+0000] {connection.py:788} INFO - closed
+[2024-10-08T07:52:32.908+0000] {connection.py:794} INFO - No async queries seem to be running, deleting session
+[2024-10-08T07:52:33.074+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/operators/sql.py", line 272, in execute
+    output = hook.run(
+             ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/snowflake/hooks/snowflake.py", line 410, in run
+    self._run_command(cur, sql_statement, parameters)  # type: ignore[attr-defined]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/hooks/sql.py", line 514, in _run_command
+    cur.execute(sql_statement)
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/cursor.py", line 1087, in execute
+    Error.errorhandler_wrapper(self.connection, self, error_class, errvalue)
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/errors.py", line 284, in errorhandler_wrapper
+    handed_over = Error.hand_to_other_handler(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/errors.py", line 339, in hand_to_other_handler
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/errors.py", line 215, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.ProgrammingError: 000904 (42000): 01b78c58-0001-613d-0001-e512000112fa: SQL compilation error: error line 5 at position 28
+invalid identifier 'MATHS_SCORE'
+[2024-10-08T07:52:33.107+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2024-10-08T07:52:33.109+0000] {logging_mixin.py:190} INFO - Task start:2024-10-08 07:52:25.146534+00:00 end:2024-10-08 07:52:33.105849+00:00 duration:7.959315
+[2024-10-08T07:52:33.110+0000] {logging_mixin.py:190} INFO - Task:<Task(SnowflakeOperator): arts_assessment> dag:<DAG: student_result> dagrun:<DagRun student_result @ 2024-10-07 00:00:00+00:00: scheduled__2024-10-07T00:00:00+00:00, state:running, queued_at: 2024-10-08 07:51:54.906266+00:00. externally triggered: False>
+[2024-10-08T07:52:33.112+0000] {logging_mixin.py:190} INFO - Failure caused by 000904 (42000): 01b78c58-0001-613d-0001-e512000112fa: SQL compilation error: error line 5 at position 28
+invalid identifier 'MATHS_SCORE'
+[2024-10-08T07:52:33.113+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=student_result, task_id=arts_assessment, run_id=scheduled__2024-10-07T00:00:00+00:00, execution_date=20241007T000000, start_date=20241008T075225, end_date=20241008T075233
+[2024-10-08T07:52:33.157+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-08T07:52:33.159+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 25 for task arts_assessment (000904 (42000): 01b78c58-0001-613d-0001-e512000112fa: SQL compilation error: error line 5 at position 28
+invalid identifier 'MATHS_SCORE'; 1133)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/operators/sql.py", line 272, in execute
+    output = hook.run(
+             ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/snowflake/hooks/snowflake.py", line 410, in run
+    self._run_command(cur, sql_statement, parameters)  # type: ignore[attr-defined]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/hooks/sql.py", line 514, in _run_command
+    cur.execute(sql_statement)
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/cursor.py", line 1087, in execute
+    Error.errorhandler_wrapper(self.connection, self, error_class, errvalue)
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/errors.py", line 284, in errorhandler_wrapper
+    handed_over = Error.hand_to_other_handler(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/errors.py", line 339, in hand_to_other_handler
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/errors.py", line 215, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.ProgrammingError: 000904 (42000): 01b78c58-0001-613d-0001-e512000112fa: SQL compilation error: error line 5 at position 28
+invalid identifier 'MATHS_SCORE'
+[2024-10-08T07:52:33.200+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-10-08T07:52:33.224+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-08T07:52:33.228+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

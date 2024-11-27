@@ -1,0 +1,169 @@
+[2024-11-17T23:25:27.352+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-17T23:25:27.385+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: capstone.down_cs manual__2024-11-17T23:15:06.122665+00:00 [queued]>
+[2024-11-17T23:25:27.400+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: capstone.down_cs manual__2024-11-17T23:15:06.122665+00:00 [queued]>
+[2024-11-17T23:25:27.401+0000] {taskinstance.py:2865} INFO - Starting attempt 3 of 5
+[2024-11-17T23:25:27.438+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): down_cs> on 2024-11-17 23:15:06.122665+00:00
+[2024-11-17T23:25:27.447+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1624) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-17T23:25:27.450+0000] {standard_task_runner.py:72} INFO - Started process 1626 to run task
+[2024-11-17T23:25:27.451+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'capstone', 'down_cs', 'manual__2024-11-17T23:15:06.122665+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/capstone_***/country.py', '--cfg-path', '/tmp/tmpfektekhe']
+[2024-11-17T23:25:27.456+0000] {standard_task_runner.py:105} INFO - Job 47: Subtask down_cs
+[2024-11-17T23:25:27.526+0000] {task_command.py:467} INFO - Running <TaskInstance: capstone.down_cs manual__2024-11-17T23:15:06.122665+00:00 [running]> on host ea8ac57aed30
+[2024-11-17T23:25:27.680+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='adewunmi' AIRFLOW_CTX_DAG_ID='capstone' AIRFLOW_CTX_TASK_ID='down_cs' AIRFLOW_CTX_EXECUTION_DATE='2024-11-17T23:15:06.122665+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-17T23:15:06.122665+00:00'
+[2024-11-17T23:25:27.682+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-17T23:25:27.703+0000] {cap.py:381} INFO - Starting table transformation process.
+[2024-11-17T23:25:27.703+0000] {cap.py:326} INFO - Starting the table joining process.
+[2024-11-17T23:25:27.704+0000] {cap.py:135} INFO - Starting column selection process.
+[2024-11-17T23:25:30.713+0000] {cap.py:116} INFO - Successfully read Parquet file from S3.
+[2024-11-17T23:25:30.715+0000] {cap.py:145} INFO - Data loaded successfully from S3.
+[2024-11-17T23:25:30.720+0000] {cap.py:157} INFO - Column selection completed successfully.
+[2024-11-17T23:25:30.725+0000] {cap.py:174} INFO - Starting currency extraction process.
+[2024-11-17T23:25:33.872+0000] {cap.py:116} INFO - Successfully read Parquet file from S3.
+[2024-11-17T23:25:33.874+0000] {cap.py:184} INFO - Data loaded successfully from S3.
+[2024-11-17T23:25:33.875+0000] {cap.py:192} INFO - Filtering currency symbol columns and joining with country names.
+[2024-11-17T23:25:33.934+0000] {cap.py:196} INFO - Melting the data to extract currency codes and symbols.
+[2024-11-17T23:25:33.985+0000] {cap.py:200} INFO - Removing rows with null currency symbols.
+[2024-11-17T23:25:34.034+0000] {cap.py:204} INFO - Cleaning up currency codes.
+[2024-11-17T23:25:34.037+0000] {cap.py:208} INFO - Grouping by country and aggregating currency symbols and codes.
+[2024-11-17T23:25:34.093+0000] {cap.py:214} INFO - Currency extraction completed successfully.
+[2024-11-17T23:25:34.103+0000] {cap.py:341} INFO - Currency code and symbol extracted successfully.
+[2024-11-17T23:25:34.104+0000] {cap.py:230} INFO - Starting currency name extraction process.
+[2024-11-17T23:25:37.428+0000] {cap.py:116} INFO - Successfully read Parquet file from S3.
+[2024-11-17T23:25:37.432+0000] {cap.py:240} INFO - Data loaded successfully from S3.
+[2024-11-17T23:25:37.433+0000] {cap.py:243} INFO - Filtering country names and currency name columns.
+[2024-11-17T23:25:37.499+0000] {cap.py:247} INFO - Melting data to extract currency names.
+[2024-11-17T23:25:37.562+0000] {cap.py:251} INFO - Removing rows with null currency names.
+[2024-11-17T23:25:37.629+0000] {cap.py:258} INFO - Grouping by country and aggregating currency names.
+[2024-11-17T23:25:37.669+0000] {cap.py:261} INFO - Currency name extraction completed successfully.
+[2024-11-17T23:25:37.677+0000] {cap.py:348} INFO - Currency name extracted successfully.
+[2024-11-17T23:25:37.678+0000] {cap.py:279} INFO - Starting language extraction process.
+[2024-11-17T23:25:40.483+0000] {cap.py:116} INFO - Successfully read Parquet file from S3.
+[2024-11-17T23:25:40.485+0000] {cap.py:289} INFO - Data loaded successfully from S3.
+[2024-11-17T23:25:40.486+0000] {cap.py:292} INFO - Filtering country names and language columns.
+[2024-11-17T23:25:40.961+0000] {cap.py:296} INFO - Melting data to extract languages.
+[2024-11-17T23:25:41.000+0000] {cap.py:300} INFO - Removing rows with null language values.
+[2024-11-17T23:25:41.062+0000] {cap.py:307} INFO - Grouping by country and aggregating languages.
+[2024-11-17T23:25:41.096+0000] {cap.py:310} INFO - Language extraction completed successfully.
+[2024-11-17T23:25:41.105+0000] {cap.py:355} INFO - Languages extracted successfully.
+[2024-11-17T23:25:41.106+0000] {cap.py:358} INFO - Joining tables.
+[2024-11-17T23:25:41.136+0000] {cap.py:363} INFO - Tables joined successfully.
+[2024-11-17T23:25:41.139+0000] {cap.py:390} INFO - Data joined successfully for transformation.
+[2024-11-17T23:25:41.158+0000] {cap.py:401} INFO - Column continents transformed successfully.
+[2024-11-17T23:25:41.174+0000] {cap.py:401} INFO - Column idd.suffixes transformed successfully.
+[2024-11-17T23:25:41.186+0000] {cap.py:401} INFO - Column capital transformed successfully.
+[2024-11-17T23:25:41.189+0000] {cap.py:408} INFO - 'country_code' column created successfully.
+[2024-11-17T23:25:41.191+0000] {cap.py:414} INFO - Unnecessary columns dropped successfully.
+[2024-11-17T23:25:41.196+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/capstone_airflow/function/cap.py", line 453, in doen_load
+    ta.to_csv("opt/airflow/dags/okku.csv", index=False)
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 3902, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/formats/format.py", line 1152, in to_csv
+    csv_formatter.save()
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/formats/csvs.py", line 247, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/common.py", line 739, in get_handle
+    check_parent_directory(str(handle))
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/common.py", line 604, in check_parent_directory
+    raise OSError(rf"Cannot save file into a non-existent directory: '{parent}'")
+OSError: Cannot save file into a non-existent directory: 'opt/***/dags'
+[2024-11-17T23:25:41.222+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=capstone, task_id=down_cs, run_id=manual__2024-11-17T23:15:06.122665+00:00, execution_date=20241117T231506, start_date=20241117T232527, end_date=20241117T232541
+[2024-11-17T23:25:41.262+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-17T23:25:41.263+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 47 for task down_cs (Cannot save file into a non-existent directory: 'opt/***/dags'; 1626)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/capstone_airflow/function/cap.py", line 453, in doen_load
+    ta.to_csv("opt/airflow/dags/okku.csv", index=False)
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 3902, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/formats/format.py", line 1152, in to_csv
+    csv_formatter.save()
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/formats/csvs.py", line 247, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/common.py", line 739, in get_handle
+    check_parent_directory(str(handle))
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/common.py", line 604, in check_parent_directory
+    raise OSError(rf"Cannot save file into a non-existent directory: '{parent}'")
+OSError: Cannot save file into a non-existent directory: 'opt/***/dags'
+[2024-11-17T23:25:41.302+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-11-17T23:25:41.328+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-17T23:25:41.334+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

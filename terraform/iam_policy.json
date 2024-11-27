@@ -1,0 +1,61 @@
+// IAM policy to get, create, list and put Bucket
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Statement1",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket",
+                "s3:Get*",
+                "s3:Put*",
+                "s3:CreateBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::*"
+            ]
+        }
+    ]
+}
+
+// IAM policy to create SSM parameter
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "OnlyCreateParmater",
+			"Effect": "Allow",
+			"Action": [
+				"ssm:PutParameter"
+			],
+			"Resource": [
+				"arn:aws:ssm:*"
+			]
+		}
+	]
+}
+
+// IAM policy to create RDS instances
+// default vpc and ingress rule was set manually on aws console
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeVpcAttribute",
+                "ec2:DescribeSecurityGroups",
+                "ec2:DescribeInternetGateways",
+                "ec2:DescribeAvailabilityZones",
+                "ec2:DescribeVpcs",
+                "ec2:DescribeAccountAttributes",
+                "ec2:DescribeSubnets",
+                "rds:Describe*",
+                "rds:ListTagsForResource",
+                "rds:CreateDBInstance",
+                "rds:CreateDBSubnetGroup"
+            ],
+            "Resource": "*"
+        }
+    ]
+}

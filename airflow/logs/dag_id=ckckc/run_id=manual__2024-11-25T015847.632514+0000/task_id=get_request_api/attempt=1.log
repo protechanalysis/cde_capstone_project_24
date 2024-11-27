@@ -1,0 +1,36 @@
+[2024-11-25T01:58:55.245+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-25T01:58:55.346+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ckckc.get_request_api manual__2024-11-25T01:58:47.632514+00:00 [queued]>
+[2024-11-25T01:58:55.386+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ckckc.get_request_api manual__2024-11-25T01:58:47.632514+00:00 [queued]>
+[2024-11-25T01:58:55.387+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 3
+[2024-11-25T01:58:55.473+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): get_request_api> on 2024-11-25 01:58:47.632514+00:00
+[2024-11-25T01:58:55.486+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=365) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-25T01:58:55.490+0000] {standard_task_runner.py:72} INFO - Started process 374 to run task
+[2024-11-25T01:58:55.491+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'ckckc', 'get_request_api', 'manual__2024-11-25T01:58:47.632514+00:00', '--job-id', '124', '--raw', '--subdir', 'DAGS_FOLDER/capstone_***/refractor_code_dag.py', '--cfg-path', '/tmp/tmps3ghg4co']
+[2024-11-25T01:58:55.496+0000] {standard_task_runner.py:105} INFO - Job 124: Subtask get_request_api
+[2024-11-25T01:58:55.793+0000] {task_command.py:467} INFO - Running <TaskInstance: ckckc.get_request_api manual__2024-11-25T01:58:47.632514+00:00 [running]> on host 18d777ba90d1
+[2024-11-25T01:58:56.095+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='adewunmi' AIRFLOW_CTX_DAG_ID='ckckc' AIRFLOW_CTX_TASK_ID='get_request_api' AIRFLOW_CTX_EXECUTION_DATE='2024-11-25T01:58:47.632514+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-25T01:58:47.632514+00:00'
+[2024-11-25T01:58:56.097+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-25T01:58:56.142+0000] {extract_load_to_s3.py:20} INFO - GET request initiating
+[2024-11-25T01:58:58.837+0000] {extract_load_to_s3.py:25} INFO - API request connection is okay
+[2024-11-25T01:58:59.309+0000] {extract_load_to_s3.py:31} INFO - Response data received successfully
+[2024-11-25T01:58:59.315+0000] {python.py:240} INFO - Done. Returned value was:        tld cca2  ... currencies.NIO.name currencies.NIO.symbol
+0    [.gs]   GS  ...                 NaN                   NaN
+1    [.gd]   GD  ...                 NaN                   NaN
+2    [.ch]   CH  ...                 NaN                   NaN
+3    [.sl]   SL  ...                 NaN                   NaN
+4    [.hu]   HU  ...                 NaN                   NaN
+..     ...  ...  ...                 ...                   ...
+245  [.be]   BE  ...                 NaN                   NaN
+246  [.il]   IL  ...                 NaN                   NaN
+247  [.nz]   NZ  ...                 NaN                   NaN
+248  [.ni]   NI  ...  Nicaraguan córdoba                    C$
+249  [.ai]   AI  ...                 NaN                   NaN
+
+[250 rows x 896 columns]
+[2024-11-25T01:59:00.446+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-25T01:59:00.447+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=ckckc, task_id=get_request_api, run_id=manual__2024-11-25T01:58:47.632514+00:00, execution_date=20241125T015847, start_date=20241125T015855, end_date=20241125T015900
+[2024-11-25T01:59:00.505+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-25T01:59:00.565+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-11-25T01:59:00.579+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

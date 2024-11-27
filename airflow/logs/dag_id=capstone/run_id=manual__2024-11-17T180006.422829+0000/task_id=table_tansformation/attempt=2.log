@@ -1,0 +1,157 @@
+[2024-11-17T22:38:20.876+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-17T22:38:20.905+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: capstone.table_tansformation manual__2024-11-17T18:00:06.422829+00:00 [queued]>
+[2024-11-17T22:38:20.921+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: capstone.table_tansformation manual__2024-11-17T18:00:06.422829+00:00 [queued]>
+[2024-11-17T22:38:20.922+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 4
+[2024-11-17T22:38:20.971+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): table_tansformation> on 2024-11-17 18:00:06.422829+00:00
+[2024-11-17T22:38:20.992+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=881) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-17T22:38:20.995+0000] {standard_task_runner.py:72} INFO - Started process 883 to run task
+[2024-11-17T22:38:20.996+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'capstone', 'table_tansformation', 'manual__2024-11-17T18:00:06.422829+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/country.py', '--cfg-path', '/tmp/tmp4bvgwsx5']
+[2024-11-17T22:38:21.002+0000] {standard_task_runner.py:105} INFO - Job 21: Subtask table_tansformation
+[2024-11-17T22:38:21.172+0000] {task_command.py:467} INFO - Running <TaskInstance: capstone.table_tansformation manual__2024-11-17T18:00:06.422829+00:00 [running]> on host ea8ac57aed30
+[2024-11-17T22:38:21.462+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='adewunmi' AIRFLOW_CTX_DAG_ID='capstone' AIRFLOW_CTX_TASK_ID='table_tansformation' AIRFLOW_CTX_EXECUTION_DATE='2024-11-17T18:00:06.422829+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-17T18:00:06.422829+00:00'
+[2024-11-17T22:38:21.464+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-17T22:38:21.487+0000] {cap.py:389} INFO - Starting table transformation process.
+[2024-11-17T22:38:21.488+0000] {cap.py:334} INFO - Starting the table joining process.
+[2024-11-17T22:38:21.489+0000] {cap.py:135} INFO - Starting column selection process.
+[2024-11-17T22:38:26.796+0000] {cap.py:116} INFO - Successfully read Parquet file from S3.
+[2024-11-17T22:38:26.797+0000] {cap.py:145} INFO - Data loaded successfully from S3.
+[2024-11-17T22:38:26.798+0000] {cap.py:160} INFO - All required columns found.
+[2024-11-17T22:38:26.803+0000] {cap.py:165} INFO - Column selection completed successfully.
+[2024-11-17T22:38:26.808+0000] {cap.py:342} INFO - Country columns selected successfully.
+[2024-11-17T22:38:26.809+0000] {cap.py:182} INFO - Starting currency extraction process.
+[2024-11-17T22:38:29.941+0000] {cap.py:116} INFO - Successfully read Parquet file from S3.
+[2024-11-17T22:38:29.943+0000] {cap.py:192} INFO - Data loaded successfully from S3.
+[2024-11-17T22:38:29.943+0000] {cap.py:200} INFO - Filtering currency symbol columns and joining with country names.
+[2024-11-17T22:38:29.991+0000] {cap.py:204} INFO - Melting the data to extract currency codes and symbols.
+[2024-11-17T22:38:30.025+0000] {cap.py:208} INFO - Removing rows with null currency symbols.
+[2024-11-17T22:38:30.079+0000] {cap.py:212} INFO - Cleaning up currency codes.
+[2024-11-17T22:38:30.082+0000] {cap.py:216} INFO - Grouping by country and aggregating currency symbols and codes.
+[2024-11-17T22:38:30.143+0000] {cap.py:222} INFO - Currency extraction completed successfully.
+[2024-11-17T22:38:30.152+0000] {cap.py:349} INFO - Currency code and symbol extracted successfully.
+[2024-11-17T22:38:30.153+0000] {cap.py:238} INFO - Starting currency name extraction process.
+[2024-11-17T22:38:33.103+0000] {cap.py:116} INFO - Successfully read Parquet file from S3.
+[2024-11-17T22:38:33.105+0000] {cap.py:248} INFO - Data loaded successfully from S3.
+[2024-11-17T22:38:33.106+0000] {cap.py:251} INFO - Filtering country names and currency name columns.
+[2024-11-17T22:38:33.146+0000] {cap.py:255} INFO - Melting data to extract currency names.
+[2024-11-17T22:38:33.188+0000] {cap.py:259} INFO - Removing rows with null currency names.
+[2024-11-17T22:38:33.241+0000] {cap.py:266} INFO - Grouping by country and aggregating currency names.
+[2024-11-17T22:38:33.281+0000] {cap.py:269} INFO - Currency name extraction completed successfully.
+[2024-11-17T22:38:33.287+0000] {cap.py:356} INFO - Currency name extracted successfully.
+[2024-11-17T22:38:33.287+0000] {cap.py:287} INFO - Starting language extraction process.
+[2024-11-17T22:38:35.957+0000] {cap.py:116} INFO - Successfully read Parquet file from S3.
+[2024-11-17T22:38:35.964+0000] {cap.py:297} INFO - Data loaded successfully from S3.
+[2024-11-17T22:38:35.965+0000] {cap.py:300} INFO - Filtering country names and language columns.
+[2024-11-17T22:38:36.416+0000] {cap.py:304} INFO - Melting data to extract languages.
+[2024-11-17T22:38:36.482+0000] {cap.py:308} INFO - Removing rows with null language values.
+[2024-11-17T22:38:36.567+0000] {cap.py:315} INFO - Grouping by country and aggregating languages.
+[2024-11-17T22:38:36.633+0000] {cap.py:318} INFO - Language extraction completed successfully.
+[2024-11-17T22:38:36.652+0000] {cap.py:363} INFO - Languages extracted successfully.
+[2024-11-17T22:38:36.653+0000] {cap.py:366} INFO - Joining tables.
+[2024-11-17T22:38:36.680+0000] {cap.py:371} INFO - Tables joined successfully.
+[2024-11-17T22:38:36.682+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/cap.py", line 392, in table_transformation
+    country_join, status = tables_joining()
+    ^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/cap.py", line 427, in table_transformation
+    raise Exception(f"Error during table transformation: {str(e)}")
+Exception: Error during table transformation: too many values to unpack (expected 2)
+[2024-11-17T22:38:36.714+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=capstone, task_id=table_tansformation, run_id=manual__2024-11-17T18:00:06.422829+00:00, execution_date=20241117T180006, start_date=20241117T223820, end_date=20241117T223836
+[2024-11-17T22:38:36.759+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-17T22:38:36.760+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 21 for task table_tansformation (Error during table transformation: too many values to unpack (expected 2); 883)
+Traceback (most recent call last):
+  File "/opt/airflow/dags/cap.py", line 392, in table_transformation
+    country_join, status = tables_joining()
+    ^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/cap.py", line 427, in table_transformation
+    raise Exception(f"Error during table transformation: {str(e)}")
+Exception: Error during table transformation: too many values to unpack (expected 2)
+[2024-11-17T22:38:36.835+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-11-17T22:38:36.943+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-17T22:38:36.983+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,77 @@
+[2024-11-19T19:34:58.232+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-19T19:34:58.254+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: capstone.renaming_columns manual__2024-11-19T19:26:50.048854+00:00 [queued]>
+[2024-11-19T19:34:58.269+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: capstone.renaming_columns manual__2024-11-19T19:26:50.048854+00:00 [queued]>
+[2024-11-19T19:34:58.270+0000] {taskinstance.py:2865} INFO - Starting attempt 3 of 5
+[2024-11-19T19:34:58.293+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): renaming_columns> on 2024-11-19 19:26:50.048854+00:00
+[2024-11-19T19:34:58.303+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2226) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-19T19:34:58.307+0000] {standard_task_runner.py:72} INFO - Started process 2228 to run task
+[2024-11-19T19:34:58.306+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'capstone', 'renaming_columns', 'manual__2024-11-19T19:26:50.048854+00:00', '--job-id', '68', '--raw', '--subdir', 'DAGS_FOLDER/capstone_***/country.py', '--cfg-path', '/tmp/tmpv5_19fq5']
+[2024-11-19T19:34:58.309+0000] {standard_task_runner.py:105} INFO - Job 68: Subtask renaming_columns
+[2024-11-19T19:34:58.373+0000] {task_command.py:467} INFO - Running <TaskInstance: capstone.renaming_columns manual__2024-11-19T19:26:50.048854+00:00 [running]> on host ea8ac57aed30
+[2024-11-19T19:34:58.496+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='adewunmi' AIRFLOW_CTX_DAG_ID='capstone' AIRFLOW_CTX_TASK_ID='renaming_columns' AIRFLOW_CTX_EXECUTION_DATE='2024-11-19T19:26:50.048854+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-19T19:26:50.048854+00:00'
+[2024-11-19T19:34:58.497+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-19T19:34:58.518+0000] {cap.py:431} INFO - Starting the column renaming process.
+[2024-11-19T19:34:58.519+0000] {cap.py:383} INFO - Starting table transformation process.
+[2024-11-19T19:34:58.521+0000] {cap.py:328} INFO - Starting the table joining process.
+[2024-11-19T19:34:58.522+0000] {cap.py:137} INFO - Starting column selection process.
+[2024-11-19T19:35:02.738+0000] {cap.py:118} INFO - Successfully read Parquet file from S3.
+[2024-11-19T19:35:02.740+0000] {cap.py:147} INFO - Data loaded successfully from S3.
+[2024-11-19T19:35:02.744+0000] {cap.py:159} INFO - Column selection completed successfully.
+[2024-11-19T19:35:02.750+0000] {cap.py:176} INFO - Starting currency extraction process.
+[2024-11-19T19:35:06.271+0000] {cap.py:118} INFO - Successfully read Parquet file from S3.
+[2024-11-19T19:35:06.273+0000] {cap.py:186} INFO - Data loaded successfully from S3.
+[2024-11-19T19:35:06.273+0000] {cap.py:194} INFO - Filtering currency symbol columns and joining with country names.
+[2024-11-19T19:35:06.314+0000] {cap.py:198} INFO - Melting the data to extract currency codes and symbols.
+[2024-11-19T19:35:06.344+0000] {cap.py:202} INFO - Removing rows with null currency symbols.
+[2024-11-19T19:35:06.390+0000] {cap.py:206} INFO - Cleaning up currency codes.
+[2024-11-19T19:35:06.392+0000] {cap.py:210} INFO - Grouping by country and aggregating currency symbols and codes.
+[2024-11-19T19:35:06.436+0000] {cap.py:216} INFO - Currency extraction completed successfully.
+[2024-11-19T19:35:06.443+0000] {cap.py:343} INFO - Currency code and symbol extracted successfully.
+[2024-11-19T19:35:06.444+0000] {cap.py:232} INFO - Starting currency name extraction process.
+[2024-11-19T19:35:11.750+0000] {cap.py:118} INFO - Successfully read Parquet file from S3.
+[2024-11-19T19:35:11.752+0000] {cap.py:242} INFO - Data loaded successfully from S3.
+[2024-11-19T19:35:11.753+0000] {cap.py:245} INFO - Filtering country names and currency name columns.
+[2024-11-19T19:35:11.797+0000] {cap.py:249} INFO - Melting data to extract currency names.
+[2024-11-19T19:35:11.836+0000] {cap.py:253} INFO - Removing rows with null currency names.
+[2024-11-19T19:35:11.894+0000] {cap.py:260} INFO - Grouping by country and aggregating currency names.
+[2024-11-19T19:35:11.944+0000] {cap.py:263} INFO - Currency name extraction completed successfully.
+[2024-11-19T19:35:11.951+0000] {cap.py:350} INFO - Currency name extracted successfully.
+[2024-11-19T19:35:11.952+0000] {cap.py:281} INFO - Starting language extraction process.
+[2024-11-19T19:35:24.873+0000] {cap.py:118} INFO - Successfully read Parquet file from S3.
+[2024-11-19T19:35:24.876+0000] {cap.py:291} INFO - Data loaded successfully from S3.
+[2024-11-19T19:35:24.877+0000] {cap.py:294} INFO - Filtering country names and language columns.
+[2024-11-19T19:35:24.914+0000] {cap.py:298} INFO - Melting data to extract languages.
+[2024-11-19T19:35:24.950+0000] {cap.py:302} INFO - Removing rows with null language values.
+[2024-11-19T19:35:24.996+0000] {cap.py:309} INFO - Grouping by country and aggregating languages.
+[2024-11-19T19:35:25.030+0000] {cap.py:312} INFO - Language extraction completed successfully.
+[2024-11-19T19:35:25.037+0000] {cap.py:357} INFO - Languages extracted successfully.
+[2024-11-19T19:35:25.038+0000] {cap.py:360} INFO - Joining tables.
+[2024-11-19T19:35:25.059+0000] {cap.py:365} INFO - Tables joined successfully.
+[2024-11-19T19:35:25.060+0000] {cap.py:392} INFO - Data joined successfully for transformation.
+[2024-11-19T19:35:25.076+0000] {cap.py:403} INFO - Column continents transformed successfully.
+[2024-11-19T19:35:25.092+0000] {cap.py:403} INFO - Column idd.suffixes transformed successfully.
+[2024-11-19T19:35:25.105+0000] {cap.py:403} INFO - Column capital transformed successfully.
+[2024-11-19T19:35:25.109+0000] {cap.py:410} INFO - 'country_code' column created successfully.
+[2024-11-19T19:35:25.111+0000] {cap.py:416} INFO - Unnecessary columns dropped successfully.
+[2024-11-19T19:35:25.112+0000] {cap.py:444} INFO - Column renaming completed successfully.
+[2024-11-19T19:35:25.113+0000] {python.py:240} INFO - Done. Returned value was:      independence  ...     country_code
+0            True  ...              +93
+1            True  ...             +355
+2            True  ...             +213
+3           False  ...            +1684
+4            True  ...             +376
+..            ...  ...              ...
+244         False  ...  +2125288 125289
+245          True  ...             +967
+246          True  ...             +260
+247          True  ...             +263
+248         False  ...           +35818
+
+[249 rows x 17 columns]
+[2024-11-19T19:35:25.221+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-19T19:35:25.221+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=capstone, task_id=renaming_columns, run_id=manual__2024-11-19T19:26:50.048854+00:00, execution_date=20241119T192650, start_date=20241119T193458, end_date=20241119T193525
+[2024-11-19T19:35:25.279+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-19T19:35:25.312+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-11-19T19:35:25.326+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,37 @@
+[2024-11-17T22:11:50.415+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-17T22:11:50.517+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: capstone.filter_column manual__2024-11-17T18:00:06.422829+00:00 [queued]>
+[2024-11-17T22:11:50.589+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: capstone.filter_column manual__2024-11-17T18:00:06.422829+00:00 [queued]>
+[2024-11-17T22:11:50.599+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 3
+[2024-11-17T22:11:50.693+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): filter_column> on 2024-11-17 18:00:06.422829+00:00
+[2024-11-17T22:11:50.719+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=510) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-17T22:11:50.741+0000] {standard_task_runner.py:72} INFO - Started process 519 to run task
+[2024-11-17T22:11:50.742+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'capstone', 'filter_column', 'manual__2024-11-17T18:00:06.422829+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/country.py', '--cfg-path', '/tmp/tmpjob9ngb3']
+[2024-11-17T22:11:50.752+0000] {standard_task_runner.py:105} INFO - Job 15: Subtask filter_column
+[2024-11-17T22:11:50.911+0000] {task_command.py:467} INFO - Running <TaskInstance: capstone.filter_column manual__2024-11-17T18:00:06.422829+00:00 [running]> on host ea8ac57aed30
+[2024-11-17T22:11:51.066+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='adewunmi' AIRFLOW_CTX_DAG_ID='capstone' AIRFLOW_CTX_TASK_ID='filter_column' AIRFLOW_CTX_EXECUTION_DATE='2024-11-17T18:00:06.422829+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-17T18:00:06.422829+00:00'
+[2024-11-17T22:11:51.069+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-17T22:11:51.106+0000] {cap.py:135} INFO - Starting column selection process.
+[2024-11-17T22:11:54.524+0000] {cap.py:116} INFO - Successfully read Parquet file from S3.
+[2024-11-17T22:11:54.526+0000] {cap.py:145} INFO - Data loaded successfully from S3.
+[2024-11-17T22:11:54.527+0000] {cap.py:160} INFO - All required columns found.
+[2024-11-17T22:11:54.532+0000] {cap.py:165} INFO - Column selection completed successfully.
+[2024-11-17T22:11:54.543+0000] {python.py:240} INFO - Done. Returned value was: (     independent    name.common  ...  idd.suffixes                  subregion
+0          False  South Georgia  ...          [00]                       <NA>
+1           True        Grenada  ...         [473]                  Caribbean
+2           True    Switzerland  ...           [1]             Western Europe
+3           True   Sierra Leone  ...          [32]             Western Africa
+4           True        Hungary  ...           [6]             Central Europe
+..           ...            ...  ...           ...                        ...
+245         True        Belgium  ...           [2]             Western Europe
+246         True         Israel  ...          [72]               Western Asia
+247         True    New Zealand  ...           [4]  Australia and New Zealand
+248         True      Nicaragua  ...          [05]            Central America
+249        False       Anguilla  ...         [264]                  Caribbean
+
+[250 rows x 14 columns], 'Selection completed successfully.')
+[2024-11-17T22:11:54.678+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-17T22:11:54.679+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=capstone, task_id=filter_column, run_id=manual__2024-11-17T18:00:06.422829+00:00, execution_date=20241117T180006, start_date=20241117T221150, end_date=20241117T221154
+[2024-11-17T22:11:54.733+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-17T22:11:54.818+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

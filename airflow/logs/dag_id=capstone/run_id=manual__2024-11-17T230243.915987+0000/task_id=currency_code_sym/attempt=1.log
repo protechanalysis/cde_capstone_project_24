@@ -1,0 +1,42 @@
+[2024-11-17T23:03:12.497+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-17T23:03:12.560+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: capstone.currency_code_sym manual__2024-11-17T23:02:43.915987+00:00 [queued]>
+[2024-11-17T23:03:12.587+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: capstone.currency_code_sym manual__2024-11-17T23:02:43.915987+00:00 [queued]>
+[2024-11-17T23:03:12.588+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 3
+[2024-11-17T23:03:12.646+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): currency_code_sym> on 2024-11-17 23:02:43.915987+00:00
+[2024-11-17T23:03:12.671+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1223) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-17T23:03:12.676+0000] {standard_task_runner.py:72} INFO - Started process 1231 to run task
+[2024-11-17T23:03:12.688+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'capstone', 'currency_code_sym', 'manual__2024-11-17T23:02:43.915987+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/country.py', '--cfg-path', '/tmp/tmpre17g2_6']
+[2024-11-17T23:03:12.692+0000] {standard_task_runner.py:105} INFO - Job 28: Subtask currency_code_sym
+[2024-11-17T23:03:12.832+0000] {task_command.py:467} INFO - Running <TaskInstance: capstone.currency_code_sym manual__2024-11-17T23:02:43.915987+00:00 [running]> on host ea8ac57aed30
+[2024-11-17T23:03:13.060+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='adewunmi' AIRFLOW_CTX_DAG_ID='capstone' AIRFLOW_CTX_TASK_ID='currency_code_sym' AIRFLOW_CTX_EXECUTION_DATE='2024-11-17T23:02:43.915987+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-17T23:02:43.915987+00:00'
+[2024-11-17T23:03:13.065+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-17T23:03:13.096+0000] {cap.py:174} INFO - Starting currency extraction process.
+[2024-11-17T23:03:17.586+0000] {cap.py:116} INFO - Successfully read Parquet file from S3.
+[2024-11-17T23:03:17.593+0000] {cap.py:184} INFO - Data loaded successfully from S3.
+[2024-11-17T23:03:17.594+0000] {cap.py:192} INFO - Filtering currency symbol columns and joining with country names.
+[2024-11-17T23:03:17.685+0000] {cap.py:196} INFO - Melting the data to extract currency codes and symbols.
+[2024-11-17T23:03:17.754+0000] {cap.py:200} INFO - Removing rows with null currency symbols.
+[2024-11-17T23:03:17.817+0000] {cap.py:204} INFO - Cleaning up currency codes.
+[2024-11-17T23:03:17.821+0000] {cap.py:208} INFO - Grouping by country and aggregating currency symbols and codes.
+[2024-11-17T23:03:17.861+0000] {cap.py:214} INFO - Currency extraction completed successfully.
+[2024-11-17T23:03:17.870+0000] {python.py:240} INFO - Done. Returned value was:         name.common currency_symbol currency_code
+0       Afghanistan               ؋           AFN
+1           Albania               L           ALL
+2           Algeria             د.ج           DZD
+3    American Samoa               $           USD
+4           Andorra               €           EUR
+..              ...             ...           ...
+242  Western Sahara        DH,دج,UM   MAD,DZD,MRU
+243           Yemen               ﷼           YER
+244          Zambia              ZK           ZMW
+245        Zimbabwe               $           ZWL
+246   Åland Islands               €           EUR
+
+[247 rows x 3 columns]
+[2024-11-17T23:03:17.964+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-17T23:03:17.965+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=capstone, task_id=currency_code_sym, run_id=manual__2024-11-17T23:02:43.915987+00:00, execution_date=20241117T230243, start_date=20241117T230312, end_date=20241117T230317
+[2024-11-17T23:03:18.087+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-17T23:03:18.140+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-17T23:03:18.146+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

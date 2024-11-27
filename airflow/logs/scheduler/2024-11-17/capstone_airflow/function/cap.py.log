@@ -1,0 +1,141 @@
+[2024-11-17T23:25:48.047+0000] {processor.py:186} INFO - Started process (PID=2703) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:25:48.049+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:25:48.053+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:25:48.052+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:25:49.414+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:25:49.437+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 1.401 seconds
+[2024-11-17T23:26:20.045+0000] {processor.py:186} INFO - Started process (PID=2717) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:26:20.047+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:26:20.050+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:26:20.049+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:26:21.428+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:26:21.446+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 1.413 seconds
+[2024-11-17T23:26:51.995+0000] {processor.py:186} INFO - Started process (PID=2731) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:26:51.996+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:26:51.998+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:26:51.997+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:26:53.199+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:26:53.219+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 1.235 seconds
+[2024-11-17T23:27:23.413+0000] {processor.py:186} INFO - Started process (PID=2746) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:27:23.415+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:27:23.417+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:27:23.417+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:27:24.346+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:27:24.364+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 0.961 seconds
+[2024-11-17T23:27:55.391+0000] {processor.py:186} INFO - Started process (PID=2759) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:27:55.392+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:27:55.395+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:27:55.394+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:27:56.309+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:27:56.326+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 0.945 seconds
+[2024-11-17T23:28:26.437+0000] {processor.py:186} INFO - Started process (PID=2773) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:28:26.440+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:28:26.442+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:28:26.441+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:28:27.864+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:28:27.881+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 1.458 seconds
+[2024-11-17T23:28:58.132+0000] {processor.py:186} INFO - Started process (PID=2785) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:28:58.149+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:28:58.170+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:28:58.169+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:29:00.497+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:29:00.544+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 2.451 seconds
+[2024-11-17T23:29:30.831+0000] {processor.py:186} INFO - Started process (PID=2799) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:29:30.834+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:29:30.837+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:29:30.836+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:29:32.048+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:29:32.073+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 1.255 seconds
+[2024-11-17T23:30:02.409+0000] {processor.py:186} INFO - Started process (PID=2813) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:30:02.411+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:30:02.413+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:30:02.412+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:30:04.312+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:30:04.333+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 1.941 seconds
+[2024-11-17T23:30:34.749+0000] {processor.py:186} INFO - Started process (PID=2828) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:30:34.751+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:30:34.755+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:30:34.754+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:30:36.289+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:30:36.305+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 1.567 seconds
+[2024-11-17T23:31:06.681+0000] {processor.py:186} INFO - Started process (PID=2843) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:31:06.682+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:31:06.685+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:31:06.684+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:31:08.385+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:31:08.400+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 1.730 seconds
+[2024-11-17T23:31:38.687+0000] {processor.py:186} INFO - Started process (PID=2858) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:31:38.689+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:31:38.697+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:31:38.696+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:31:41.256+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:31:41.283+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 2.615 seconds
+[2024-11-17T23:32:12.007+0000] {processor.py:186} INFO - Started process (PID=2872) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:32:12.011+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:32:12.014+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:32:12.013+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:32:13.359+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:32:13.387+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 1.393 seconds
+[2024-11-17T23:32:44.277+0000] {processor.py:186} INFO - Started process (PID=2886) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:32:44.279+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:32:44.283+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:32:44.282+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:32:46.773+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:32:46.802+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 2.537 seconds
+[2024-11-17T23:33:17.006+0000] {processor.py:186} INFO - Started process (PID=2906) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:33:17.008+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:33:17.010+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:33:17.009+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:33:18.164+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:33:18.180+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 1.182 seconds
+[2024-11-17T23:33:35.935+0000] {processor.py:186} INFO - Started process (PID=2911) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:33:35.938+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:33:35.941+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:33:35.940+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:33:35.964+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:33:35.963+0000] {dagbag.py:365} INFO - File /opt/airflow/dags/capstone_airflow/function/cap.py assumed to contain no DAGs. Skipping.
+[2024-11-17T23:33:35.965+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:33:35.991+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 0.077 seconds
+[2024-11-17T23:33:40.069+0000] {processor.py:186} INFO - Started process (PID=2913) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:33:40.070+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:33:40.073+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:33:40.072+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:33:40.093+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:33:40.092+0000] {dagbag.py:365} INFO - File /opt/airflow/dags/capstone_airflow/function/cap.py assumed to contain no DAGs. Skipping.
+[2024-11-17T23:33:40.094+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:33:40.120+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 0.065 seconds
+[2024-11-17T23:33:41.947+0000] {processor.py:186} INFO - Started process (PID=2916) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:33:41.948+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:33:41.951+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:33:41.950+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:33:41.966+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:33:41.965+0000] {dagbag.py:365} INFO - File /opt/airflow/dags/capstone_airflow/function/cap.py assumed to contain no DAGs. Skipping.
+[2024-11-17T23:33:41.967+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:33:41.985+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 0.049 seconds
+[2024-11-17T23:33:45.132+0000] {processor.py:186} INFO - Started process (PID=2917) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:33:45.134+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:33:45.137+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:33:45.136+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:33:45.150+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:33:45.150+0000] {dagbag.py:365} INFO - File /opt/airflow/dags/capstone_airflow/function/cap.py assumed to contain no DAGs. Skipping.
+[2024-11-17T23:33:45.151+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:33:45.169+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 0.049 seconds
+[2024-11-17T23:33:47.208+0000] {processor.py:186} INFO - Started process (PID=2924) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:33:47.212+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:33:47.216+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:33:47.215+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:33:47.235+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:33:47.235+0000] {dagbag.py:365} INFO - File /opt/airflow/dags/capstone_airflow/function/cap.py assumed to contain no DAGs. Skipping.
+[2024-11-17T23:33:47.236+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:33:47.254+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 0.056 seconds
+[2024-11-17T23:33:49.351+0000] {processor.py:186} INFO - Started process (PID=2925) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:33:49.353+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:33:49.356+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:33:49.355+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:33:49.380+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:33:49.379+0000] {dagbag.py:365} INFO - File /opt/airflow/dags/capstone_airflow/function/cap.py assumed to contain no DAGs. Skipping.
+[2024-11-17T23:33:49.381+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:33:49.417+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 0.084 seconds
+[2024-11-17T23:34:12.593+0000] {processor.py:186} INFO - Started process (PID=2932) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:34:12.595+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:34:12.597+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:34:12.596+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:34:12.612+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:34:12.611+0000] {dagbag.py:365} INFO - File /opt/airflow/dags/capstone_airflow/function/cap.py assumed to contain no DAGs. Skipping.
+[2024-11-17T23:34:12.612+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:34:12.631+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 0.046 seconds
+[2024-11-17T23:34:16.788+0000] {processor.py:186} INFO - Started process (PID=2933) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:34:16.790+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:34:16.793+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:34:16.792+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:34:16.946+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:34:16.935+0000] {dagbag.py:365} INFO - File /opt/airflow/dags/capstone_airflow/function/cap.py assumed to contain no DAGs. Skipping.
+[2024-11-17T23:34:16.948+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:34:17.034+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 0.280 seconds
+[2024-11-17T23:34:33.324+0000] {processor.py:186} INFO - Started process (PID=2944) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:34:33.325+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:34:33.328+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:34:33.327+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:34:33.343+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:34:33.342+0000] {dagbag.py:365} INFO - File /opt/airflow/dags/capstone_airflow/function/cap.py assumed to contain no DAGs. Skipping.
+[2024-11-17T23:34:33.343+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:34:33.361+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 0.045 seconds
+[2024-11-17T23:34:55.808+0000] {processor.py:186} INFO - Started process (PID=2957) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:34:55.810+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:34:55.813+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:34:55.812+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:34:55.837+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:34:55.837+0000] {dagbag.py:365} INFO - File /opt/airflow/dags/capstone_airflow/function/cap.py assumed to contain no DAGs. Skipping.
+[2024-11-17T23:34:55.838+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:34:55.862+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 0.067 seconds
+[2024-11-17T23:35:26.824+0000] {processor.py:186} INFO - Started process (PID=2970) to work on /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:35:26.827+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/function/cap.py for tasks to queue
+[2024-11-17T23:35:26.829+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:35:26.828+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:35:26.845+0000] {logging_mixin.py:190} INFO - [2024-11-17T23:35:26.845+0000] {dagbag.py:365} INFO - File /opt/airflow/dags/capstone_airflow/function/cap.py assumed to contain no DAGs. Skipping.
+[2024-11-17T23:35:26.847+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/function/cap.py
+[2024-11-17T23:35:26.868+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/function/cap.py took 0.060 seconds

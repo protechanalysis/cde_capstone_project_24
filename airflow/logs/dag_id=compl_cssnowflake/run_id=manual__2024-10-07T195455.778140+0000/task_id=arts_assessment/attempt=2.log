@@ -1,0 +1,86 @@
+[2024-10-07T19:59:09.466+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-07T19:59:09.498+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: compl_cssnowflake.arts_assessment manual__2024-10-07T19:54:55.778140+00:00 [queued]>
+[2024-10-07T19:59:09.517+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: compl_cssnowflake.arts_assessment manual__2024-10-07T19:54:55.778140+00:00 [queued]>
+[2024-10-07T19:59:09.518+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2024-10-07T19:59:09.585+0000] {taskinstance.py:2888} INFO - Executing <Task(SnowflakeOperator): arts_assessment> on 2024-10-07 19:54:55.778140+00:00
+[2024-10-07T19:59:09.597+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=4835) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-07T19:59:09.601+0000] {standard_task_runner.py:72} INFO - Started process 4844 to run task
+[2024-10-07T19:59:09.615+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'compl_cssnowflake', 'arts_assessment', 'manual__2024-10-07T19:54:55.778140+00:00', '--job-id', '66', '--raw', '--subdir', 'DAGS_FOLDER/school/ty.py', '--cfg-path', '/tmp/tmpjukya15p']
+[2024-10-07T19:59:09.617+0000] {standard_task_runner.py:105} INFO - Job 66: Subtask arts_assessment
+[2024-10-07T19:59:09.725+0000] {task_command.py:467} INFO - Running <TaskInstance: compl_cssnowflake.arts_assessment manual__2024-10-07T19:54:55.778140+00:00 [running]> on host 67bc14123253
+[2024-10-07T19:59:09.917+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='seylow' AIRFLOW_CTX_DAG_ID='compl_cssnowflake' AIRFLOW_CTX_TASK_ID='arts_assessment' AIRFLOW_CTX_EXECUTION_DATE='2024-10-07T19:54:55.778140+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-07T19:54:55.778140+00:00'
+[2024-10-07T19:59:09.920+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-10-07T19:59:09.921+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-10-07T19:59:09.922+0000] {logging_mixin.py:190} INFO - Current task name:arts_assessment state:running start_date:2024-10-07 19:59:09.499635+00:00
+[2024-10-07T19:59:09.923+0000] {logging_mixin.py:190} INFO - Dag name:compl_cssnowflake and current dag run status:running
+[2024-10-07T19:59:09.924+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-07T19:59:09.924+0000] {sql.py:266} INFO - Executing: 
+        CREATE OR REPLACE TEMPORARY TABLE temp_arts_class AS
+            SELECT * FROM school.data_schema.arts_class WHERE 1 = 0;  -- Create an empty table with the same structure as the target
+
+        COPY INTO temp_arts_class
+        FROM @school.data_schema.student
+        PATTERN = 'arts_class.csv'
+        FILE_FORMAT = csv_format;
+
+        MERGE INTO school.data_schema.arts_class AS target
+        USING temp_arts_class AS source
+        ON target.student_id = source.student_id  -- Match based on the unique identifier, like student_id
+        WHEN NOT MATCHED THEN
+        INSERT (student_id, Maths_score, English_score, Civic_education_score, Economics_score, Government_score,
+          CRS_score, Lit_in_Eng_score, Yoruba_score, History_score, Total_Grade_Points, Average_Score)
+        VALUES (source.student_id, source.Maths_score, source.English_score, source.Civic_education_score,
+          source.Economics_score, source.Government_score, source.CRS_score, source.Lit_in_Eng_score, source.Yoruba_score, source.History_score, source.Total_Grade_Points, source.Average_Score);
+
+        DROP TABLE temp_arts_class;
+        
+[2024-10-07T19:59:09.947+0000] {base.py:84} INFO - Retrieving connection 'secondary'
+[2024-10-07T19:59:09.978+0000] {base.py:84} INFO - Retrieving connection 'secondary'
+[2024-10-07T19:59:09.982+0000] {connection.py:413} INFO - Snowflake Connector for Python Version: 3.12.1, Python Version: 3.12.5, Platform: Linux-5.15.153.1-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[2024-10-07T19:59:09.984+0000] {connection.py:1196} INFO - Connecting to GLOBAL Snowflake domain
+[2024-10-07T19:59:09.985+0000] {connection.py:1277} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-10-07T19:59:11.530+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2024-10-07T19:59:11.531+0000] {sql.py:509} INFO - Running statement: CREATE OR REPLACE TEMPORARY TABLE temp_arts_class AS
+            SELECT * FROM school.data_schema.arts_class WHERE 1 = 0;  -- Create an empty table with the same structure as the target, parameters: None
+[2024-10-07T19:59:11.939+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2024-10-07T19:59:11.940+0000] {sql.py:518} INFO - Rows affected: 1
+[2024-10-07T19:59:11.941+0000] {snowflake.py:422} INFO - Rows affected: 1
+[2024-10-07T19:59:11.943+0000] {snowflake.py:423} INFO - Snowflake query id: 01b7898f-0001-6110-0000-0001e512f3e1
+[2024-10-07T19:59:11.944+0000] {sql.py:509} INFO - Running statement: COPY INTO temp_arts_class
+        FROM @school.data_schema.student
+        PATTERN = 'arts_class.csv'
+        FILE_FORMAT = csv_format;, parameters: None
+[2024-10-07T19:59:13.360+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2024-10-07T19:59:13.361+0000] {sql.py:518} INFO - Rows affected: 1
+[2024-10-07T19:59:13.363+0000] {snowflake.py:422} INFO - Rows affected: 1
+[2024-10-07T19:59:13.364+0000] {snowflake.py:423} INFO - Snowflake query id: 01b7898f-0001-5ef3-0000-0001e512c809
+[2024-10-07T19:59:13.365+0000] {sql.py:509} INFO - Running statement: MERGE INTO school.data_schema.arts_class AS target
+        USING temp_arts_class AS source
+        ON target.student_id = source.student_id  -- Match based on the unique identifier, like student_id
+        WHEN NOT MATCHED THEN
+        INSERT (student_id, Maths_score, English_score, Civic_education_score, Economics_score, Government_score,
+          CRS_score, Lit_in_Eng_score, Yoruba_score, History_score, Total_Grade_Points, Average_Score)
+        VALUES (source.student_id, source.Maths_score, source.English_score, source.Civic_education_score,
+          source.Economics_score, source.Government_score, source.CRS_score, source.Lit_in_Eng_score, source.Yoruba_score, source.History_score, source.Total_Grade_Points, source.Average_Score);, parameters: None
+[2024-10-07T19:59:13.870+0000] {sql.py:518} INFO - Rows affected: 102
+[2024-10-07T19:59:13.876+0000] {snowflake.py:422} INFO - Rows affected: 102
+[2024-10-07T19:59:13.877+0000] {snowflake.py:423} INFO - Snowflake query id: 01b7898f-0001-5ef3-0000-0001e512c815
+[2024-10-07T19:59:13.878+0000] {sql.py:509} INFO - Running statement: DROP TABLE temp_arts_class;, parameters: None
+[2024-10-07T19:59:14.289+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2024-10-07T19:59:14.291+0000] {sql.py:518} INFO - Rows affected: 1
+[2024-10-07T19:59:14.292+0000] {snowflake.py:422} INFO - Rows affected: 1
+[2024-10-07T19:59:14.293+0000] {snowflake.py:423} INFO - Snowflake query id: 01b7898f-0001-6110-0000-0001e512f3e9
+[2024-10-07T19:59:14.454+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2024-10-07T19:59:14.455+0000] {connection.py:788} INFO - closed
+[2024-10-07T19:59:14.630+0000] {connection.py:794} INFO - No async queries seem to be running, deleting session
+[2024-10-07T19:59:14.905+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-07T19:59:14.911+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=compl_cssnowflake, task_id=arts_assessment, run_id=manual__2024-10-07T19:54:55.778140+00:00, execution_date=20241007T195455, start_date=20241007T195909, end_date=20241007T195914
+[2024-10-07T19:59:14.949+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-10-07T19:59:14.950+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-10-07T19:59:14.951+0000] {logging_mixin.py:190} INFO - Dag name:compl_cssnowflake queued_at:2024-10-07 19:58:46.418218+00:00
+[2024-10-07T19:59:14.953+0000] {logging_mixin.py:190} INFO - Task hostname:67bc14123253 operator:SnowflakeOperator
+[2024-10-07T19:59:15.023+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-07T19:59:15.051+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-07T19:59:15.063+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

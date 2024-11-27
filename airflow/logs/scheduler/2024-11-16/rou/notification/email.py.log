@@ -1,0 +1,5 @@
+[2024-11-16T10:33:17.710+0000] {processor.py:186} INFO - Started process (PID=643) to work on /opt/airflow/dags/rou/notification/email.py
+[2024-11-16T10:33:17.712+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/rou/notification/email.py for tasks to queue
+[2024-11-16T10:33:17.715+0000] {logging_mixin.py:190} INFO - [2024-11-16T10:33:17.714+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/rou/notification/email.py
+[2024-11-16T10:33:17.718+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/rou/notification/email.py
+[2024-11-16T10:33:17.740+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rou/notification/email.py took 0.047 seconds

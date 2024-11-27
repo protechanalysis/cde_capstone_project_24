@@ -1,0 +1,65 @@
+[2024-11-19T19:23:08.497+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-19T19:23:08.535+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: create_country_table.create_postgres_table manual__2024-11-19T19:23:06.120410+00:00 [queued]>
+[2024-11-19T19:23:08.553+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: create_country_table.create_postgres_table manual__2024-11-19T19:23:06.120410+00:00 [queued]>
+[2024-11-19T19:23:08.555+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 3
+[2024-11-19T19:23:08.586+0000] {taskinstance.py:2888} INFO - Executing <Task(PostgresOperator): create_postgres_table> on 2024-11-19 19:23:06.120410+00:00
+[2024-11-19T19:23:08.597+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2018) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-19T19:23:08.600+0000] {standard_task_runner.py:72} INFO - Started process 2019 to run task
+[2024-11-19T19:23:08.601+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'create_country_table', 'create_postgres_table', 'manual__2024-11-19T19:23:06.120410+00:00', '--job-id', '56', '--raw', '--subdir', 'DAGS_FOLDER/capstone_***/create_table.py', '--cfg-path', '/tmp/tmpkdz4_6ks']
+[2024-11-19T19:23:08.605+0000] {standard_task_runner.py:105} INFO - Job 56: Subtask create_postgres_table
+[2024-11-19T19:23:08.684+0000] {task_command.py:467} INFO - Running <TaskInstance: create_country_table.create_postgres_table manual__2024-11-19T19:23:06.120410+00:00 [running]> on host ea8ac57aed30
+[2024-11-19T19:23:08.840+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='adewunmi' AIRFLOW_CTX_DAG_ID='create_country_table' AIRFLOW_CTX_TASK_ID='create_postgres_table' AIRFLOW_CTX_EXECUTION_DATE='2024-11-19T19:23:06.120410+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-19T19:23:06.120410+00:00'
+[2024-11-19T19:23:08.842+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-19T19:23:08.867+0000] {sql.py:266} INFO - Executing: 
+        CREATE TABLE country_data (
+            country_name VARCHAR(255) not null,
+            independence BOOLEAN,
+            united_nation_members BOOLEAN,
+            start_of_week VARCHAR(50),
+            official_country_name VARCHAR(255),
+            common_native_name VARCHAR(255),
+            currency_code TEXT,
+            currency_name TEXT,
+            currency_symbol TEXT,
+            country_code TEXT,
+            capital VARCHAR(100),
+            region VARCHAR(100),
+            subregion VARCHAR(100),
+            languages TEXT,
+            area FLOAT,
+            population BIGINT,
+            continents VARCHAR(100),
+            PRIMARY KEY (country_name)
+        );
+        
+[2024-11-19T19:23:08.882+0000] {base.py:84} INFO - Retrieving connection 'rds_connect'
+[2024-11-19T19:23:08.905+0000] {base.py:84} INFO - Retrieving connection 'rds_connect'
+[2024-11-19T19:23:10.414+0000] {sql.py:509} INFO - Running statement: 
+        CREATE TABLE country_data (
+            country_name VARCHAR(255) not null,
+            independence BOOLEAN,
+            united_nation_members BOOLEAN,
+            start_of_week VARCHAR(50),
+            official_country_name VARCHAR(255),
+            common_native_name VARCHAR(255),
+            currency_code TEXT,
+            currency_name TEXT,
+            currency_symbol TEXT,
+            country_code TEXT,
+            capital VARCHAR(100),
+            region VARCHAR(100),
+            subregion VARCHAR(100),
+            languages TEXT,
+            area FLOAT,
+            population BIGINT,
+            continents VARCHAR(100),
+            PRIMARY KEY (country_name)
+        );
+        , parameters: None
+[2024-11-19T19:23:11.383+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-19T19:23:11.386+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=create_country_table, task_id=create_postgres_table, run_id=manual__2024-11-19T19:23:06.120410+00:00, execution_date=20241119T192306, start_date=20241119T192308, end_date=20241119T192311
+[2024-11-19T19:23:11.446+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-19T19:23:11.469+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-19T19:23:11.481+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

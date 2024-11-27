@@ -1,0 +1,5 @@
+[2024-11-16T10:33:17.836+0000] {processor.py:186} INFO - Started process (PID=644) to work on /opt/airflow/dags/rou/database.py
+[2024-11-16T10:33:17.838+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/rou/database.py for tasks to queue
+[2024-11-16T10:33:17.842+0000] {logging_mixin.py:190} INFO - [2024-11-16T10:33:17.840+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/rou/database.py
+[2024-11-16T10:33:17.844+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/rou/database.py
+[2024-11-16T10:33:17.863+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rou/database.py took 0.047 seconds
