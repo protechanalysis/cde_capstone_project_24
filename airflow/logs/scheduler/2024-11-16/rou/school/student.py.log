@@ -1,5 +1,0 @@
-[2024-11-16T10:33:17.978+0000] {processor.py:186} INFO - Started process (PID=646) to work on /opt/airflow/dags/rou/school/student.py
-[2024-11-16T10:33:17.981+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/rou/school/student.py for tasks to queue
-[2024-11-16T10:33:17.984+0000] {logging_mixin.py:190} INFO - [2024-11-16T10:33:17.983+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/rou/school/student.py
-[2024-11-16T10:33:17.986+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/rou/school/student.py
-[2024-11-16T10:33:18.006+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/rou/school/student.py took 0.041 seconds
