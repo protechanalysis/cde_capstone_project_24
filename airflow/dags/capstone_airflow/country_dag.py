@@ -1,7 +1,5 @@
 from datetime import datetime, timedelta
 
-from airflow import DAG
-
 from airflow.operators.python_operator import PythonOperator
 from capstone_airflow.function.data_to_database import load_to_database
 from capstone_airflow.function.extract_columns import column_selections
@@ -15,6 +13,7 @@ from capstone_airflow.function.load_from_s3 import read_s3_parquet
 from capstone_airflow.function.transformation import table_transformation
 from capstone_airflow.notification.email_notification import task_fail_alert
 
+from airflow import DAG
 
 default_args = {
     'owner': 'adewunmi',

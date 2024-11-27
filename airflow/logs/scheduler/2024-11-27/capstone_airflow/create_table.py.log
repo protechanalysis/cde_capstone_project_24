@@ -1657,3 +1657,38 @@
 [2024-11-27T02:01:33.371+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:01:33.362+0000] {dag.py:3229} INFO - Sync 1 DAGs
 [2024-11-27T02:01:33.424+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:01:33.424+0000] {dag.py:4156} INFO - Setting next_dagrun for create_country_table to None, run_after=None
 [2024-11-27T02:01:33.460+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/create_table.py took 0.243 seconds
+[2024-11-27T02:02:04.115+0000] {processor.py:186} INFO - Started process (PID=5156) to work on /opt/airflow/dags/capstone_airflow/create_table.py
+[2024-11-27T02:02:04.117+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/create_table.py for tasks to queue
+[2024-11-27T02:02:04.120+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:02:04.119+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/create_table.py
+[2024-11-27T02:02:04.161+0000] {processor.py:925} INFO - DAG(s) 'create_country_table' retrieved from /opt/airflow/dags/capstone_airflow/create_table.py
+[2024-11-27T02:02:04.225+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:02:04.225+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-11-27T02:02:04.258+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:02:04.258+0000] {dag.py:4156} INFO - Setting next_dagrun for create_country_table to None, run_after=None
+[2024-11-27T02:02:04.301+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/create_table.py took 0.198 seconds
+[2024-11-27T02:02:34.548+0000] {processor.py:186} INFO - Started process (PID=5166) to work on /opt/airflow/dags/capstone_airflow/create_table.py
+[2024-11-27T02:02:34.550+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/create_table.py for tasks to queue
+[2024-11-27T02:02:34.551+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:02:34.551+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/create_table.py
+[2024-11-27T02:02:34.578+0000] {processor.py:925} INFO - DAG(s) 'create_country_table' retrieved from /opt/airflow/dags/capstone_airflow/create_table.py
+[2024-11-27T02:02:34.636+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:02:34.636+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-11-27T02:02:34.665+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:02:34.664+0000] {dag.py:4156} INFO - Setting next_dagrun for create_country_table to None, run_after=None
+[2024-11-27T02:02:34.706+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/create_table.py took 0.169 seconds
+[2024-11-27T02:03:05.207+0000] {processor.py:186} INFO - Started process (PID=5178) to work on /opt/airflow/dags/capstone_airflow/create_table.py
+[2024-11-27T02:03:05.208+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/create_table.py for tasks to queue
+[2024-11-27T02:03:05.210+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:03:05.209+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/create_table.py
+[2024-11-27T02:03:05.235+0000] {processor.py:925} INFO - DAG(s) 'create_country_table' retrieved from /opt/airflow/dags/capstone_airflow/create_table.py
+[2024-11-27T02:03:05.281+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:03:05.281+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-11-27T02:03:05.304+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:03:05.304+0000] {dag.py:4156} INFO - Setting next_dagrun for create_country_table to None, run_after=None
+[2024-11-27T02:03:05.337+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/create_table.py took 0.138 seconds
+[2024-11-27T02:03:36.052+0000] {processor.py:186} INFO - Started process (PID=5188) to work on /opt/airflow/dags/capstone_airflow/create_table.py
+[2024-11-27T02:03:36.054+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/create_table.py for tasks to queue
+[2024-11-27T02:03:36.055+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:03:36.055+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/create_table.py
+[2024-11-27T02:03:36.080+0000] {processor.py:925} INFO - DAG(s) 'create_country_table' retrieved from /opt/airflow/dags/capstone_airflow/create_table.py
+[2024-11-27T02:03:36.127+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:03:36.127+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-11-27T02:03:36.154+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:03:36.154+0000] {dag.py:4156} INFO - Setting next_dagrun for create_country_table to None, run_after=None
+[2024-11-27T02:03:36.188+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/create_table.py took 0.144 seconds
+[2024-11-27T02:03:40.484+0000] {processor.py:186} INFO - Started process (PID=5189) to work on /opt/airflow/dags/capstone_airflow/create_table.py
+[2024-11-27T02:03:40.486+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/create_table.py for tasks to queue
+[2024-11-27T02:03:40.492+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:03:40.491+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/create_table.py
+[2024-11-27T02:03:40.545+0000] {processor.py:925} INFO - DAG(s) 'create_country_table' retrieved from /opt/airflow/dags/capstone_airflow/create_table.py
+[2024-11-27T02:03:40.596+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:03:40.596+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-11-27T02:03:40.628+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:03:40.627+0000] {dag.py:4156} INFO - Setting next_dagrun for create_country_table to None, run_after=None
+[2024-11-27T02:03:40.797+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/create_table.py took 0.322 seconds
