@@ -1208,3 +1208,63 @@
 [2024-11-27T02:03:42.548+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:03:42.548+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
 [2024-11-27T02:03:42.575+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
 [2024-11-27T02:03:42.595+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/notification/email_notification.py took 0.064 seconds
+[2024-11-27T02:04:12.661+0000] {processor.py:186} INFO - Started process (PID=5201) to work on /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:04:12.662+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/notification/email_notification.py for tasks to queue
+[2024-11-27T02:04:12.664+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:04:12.663+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:04:12.685+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:04:12.702+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/notification/email_notification.py took 0.051 seconds
+[2024-11-27T02:04:42.899+0000] {processor.py:186} INFO - Started process (PID=5212) to work on /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:04:42.900+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/notification/email_notification.py for tasks to queue
+[2024-11-27T02:04:42.902+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:04:42.902+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:04:42.921+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:04:42.940+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/notification/email_notification.py took 0.052 seconds
+[2024-11-27T02:05:13.550+0000] {processor.py:186} INFO - Started process (PID=5221) to work on /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:05:13.551+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/notification/email_notification.py for tasks to queue
+[2024-11-27T02:05:13.553+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:05:13.553+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:05:13.575+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:05:13.593+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/notification/email_notification.py took 0.052 seconds
+[2024-11-27T02:05:44.138+0000] {processor.py:186} INFO - Started process (PID=5231) to work on /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:05:44.139+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/notification/email_notification.py for tasks to queue
+[2024-11-27T02:05:44.141+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:05:44.141+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:05:44.163+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:05:44.188+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/notification/email_notification.py took 0.059 seconds
+[2024-11-27T02:06:14.291+0000] {processor.py:186} INFO - Started process (PID=5241) to work on /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:06:14.293+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/notification/email_notification.py for tasks to queue
+[2024-11-27T02:06:14.295+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:06:14.295+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:06:14.316+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:06:14.337+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/notification/email_notification.py took 0.056 seconds
+[2024-11-27T02:06:45.206+0000] {processor.py:186} INFO - Started process (PID=5257) to work on /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:06:45.208+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/notification/email_notification.py for tasks to queue
+[2024-11-27T02:06:45.210+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:06:45.209+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:06:45.233+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:06:45.257+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/notification/email_notification.py took 0.059 seconds
+[2024-11-27T02:07:15.853+0000] {processor.py:186} INFO - Started process (PID=5265) to work on /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:07:15.855+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/notification/email_notification.py for tasks to queue
+[2024-11-27T02:07:15.857+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:07:15.857+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:07:15.877+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:07:15.897+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/notification/email_notification.py took 0.057 seconds
+[2024-11-27T02:07:46.520+0000] {processor.py:186} INFO - Started process (PID=5275) to work on /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:07:46.522+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/notification/email_notification.py for tasks to queue
+[2024-11-27T02:07:46.524+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:07:46.524+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:07:46.547+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:07:46.566+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/notification/email_notification.py took 0.057 seconds
+[2024-11-27T02:08:17.268+0000] {processor.py:186} INFO - Started process (PID=5285) to work on /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:08:17.272+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/notification/email_notification.py for tasks to queue
+[2024-11-27T02:08:17.275+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:08:17.274+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:08:17.306+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:08:17.329+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/notification/email_notification.py took 0.073 seconds
+[2024-11-27T02:08:48.190+0000] {processor.py:186} INFO - Started process (PID=5295) to work on /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:08:48.192+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/notification/email_notification.py for tasks to queue
+[2024-11-27T02:08:48.194+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:08:48.193+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:08:48.217+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:08:48.235+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/notification/email_notification.py took 0.057 seconds
+[2024-11-27T02:09:18.673+0000] {processor.py:186} INFO - Started process (PID=5305) to work on /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:09:18.675+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/notification/email_notification.py for tasks to queue
+[2024-11-27T02:09:18.678+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:09:18.677+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:09:18.707+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:09:18.726+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/notification/email_notification.py took 0.066 seconds
+[2024-11-27T02:09:49.180+0000] {processor.py:186} INFO - Started process (PID=5318) to work on /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:09:49.182+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/notification/email_notification.py for tasks to queue
+[2024-11-27T02:09:49.186+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:09:49.186+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:09:49.212+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/capstone_airflow/notification/email_notification.py
+[2024-11-27T02:09:49.235+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/notification/email_notification.py took 0.067 seconds

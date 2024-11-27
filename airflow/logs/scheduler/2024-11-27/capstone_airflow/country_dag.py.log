@@ -1639,3 +1639,80 @@ NameError: name 'DAG' is not defined
 [2024-11-27T02:03:34.061+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:03:34.060+0000] {dag.py:3229} INFO - Sync 1 DAGs
 [2024-11-27T02:03:34.077+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:03:34.076+0000] {dag.py:4156} INFO - Setting next_dagrun for capstone to None, run_after=None
 [2024-11-27T02:03:34.101+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/country_dag.py took 1.141 seconds
+[2024-11-27T02:04:04.328+0000] {processor.py:186} INFO - Started process (PID=5198) to work on /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:04:04.329+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/country_dag.py for tasks to queue
+[2024-11-27T02:04:04.333+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:04:04.332+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:04:05.907+0000] {processor.py:925} INFO - DAG(s) 'capstone' retrieved from /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:04:06.033+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:04:06.032+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-11-27T02:04:06.058+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:04:06.057+0000] {dag.py:4156} INFO - Setting next_dagrun for capstone to None, run_after=None
+[2024-11-27T02:04:06.113+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/country_dag.py took 1.805 seconds
+[2024-11-27T02:04:37.105+0000] {processor.py:186} INFO - Started process (PID=5209) to work on /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:04:37.106+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/country_dag.py for tasks to queue
+[2024-11-27T02:04:37.109+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:04:37.108+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:04:38.505+0000] {processor.py:925} INFO - DAG(s) 'capstone' retrieved from /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:04:38.584+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:04:38.584+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-11-27T02:04:38.602+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:04:38.602+0000] {dag.py:4156} INFO - Setting next_dagrun for capstone to None, run_after=None
+[2024-11-27T02:04:38.639+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/country_dag.py took 1.546 seconds
+[2024-11-27T02:05:09.376+0000] {processor.py:186} INFO - Started process (PID=5218) to work on /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:05:09.378+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/country_dag.py for tasks to queue
+[2024-11-27T02:05:09.380+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:05:09.380+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:05:10.562+0000] {processor.py:925} INFO - DAG(s) 'capstone' retrieved from /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:05:10.643+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:05:10.642+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-11-27T02:05:10.660+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:05:10.660+0000] {dag.py:4156} INFO - Setting next_dagrun for capstone to None, run_after=None
+[2024-11-27T02:05:10.685+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/country_dag.py took 1.319 seconds
+[2024-11-27T02:05:41.042+0000] {processor.py:186} INFO - Started process (PID=5228) to work on /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:05:41.043+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/country_dag.py for tasks to queue
+[2024-11-27T02:05:41.046+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:05:41.045+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:05:42.345+0000] {processor.py:925} INFO - DAG(s) 'capstone' retrieved from /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:05:42.418+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:05:42.417+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-11-27T02:05:42.435+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:05:42.434+0000] {dag.py:4156} INFO - Setting next_dagrun for capstone to None, run_after=None
+[2024-11-27T02:05:42.469+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/country_dag.py took 1.443 seconds
+[2024-11-27T02:06:12.789+0000] {processor.py:186} INFO - Started process (PID=5238) to work on /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:06:12.790+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/country_dag.py for tasks to queue
+[2024-11-27T02:06:12.792+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:06:12.792+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:06:14.085+0000] {processor.py:925} INFO - DAG(s) 'capstone' retrieved from /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:06:14.169+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:06:14.168+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-11-27T02:06:14.191+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:06:14.191+0000] {dag.py:4156} INFO - Setting next_dagrun for capstone to None, run_after=None
+[2024-11-27T02:06:14.222+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/country_dag.py took 1.445 seconds
+[2024-11-27T02:06:44.998+0000] {processor.py:186} INFO - Started process (PID=5255) to work on /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:06:45.000+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/country_dag.py for tasks to queue
+[2024-11-27T02:06:45.003+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:06:45.003+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:06:46.137+0000] {processor.py:925} INFO - DAG(s) 'capstone' retrieved from /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:06:46.205+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:06:46.205+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-11-27T02:06:46.221+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:06:46.220+0000] {dag.py:4156} INFO - Setting next_dagrun for capstone to None, run_after=None
+[2024-11-27T02:06:46.248+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/country_dag.py took 1.263 seconds
+[2024-11-27T02:07:17.110+0000] {processor.py:186} INFO - Started process (PID=5266) to work on /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:07:17.112+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/country_dag.py for tasks to queue
+[2024-11-27T02:07:17.125+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:07:17.117+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:07:18.816+0000] {processor.py:925} INFO - DAG(s) 'capstone' retrieved from /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:07:18.880+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:07:18.880+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-11-27T02:07:18.896+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:07:18.895+0000] {dag.py:4156} INFO - Setting next_dagrun for capstone to None, run_after=None
+[2024-11-27T02:07:18.940+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/country_dag.py took 1.862 seconds
+[2024-11-27T02:07:49.057+0000] {processor.py:186} INFO - Started process (PID=5276) to work on /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:07:49.058+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/country_dag.py for tasks to queue
+[2024-11-27T02:07:49.060+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:07:49.060+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:07:50.556+0000] {processor.py:925} INFO - DAG(s) 'capstone' retrieved from /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:07:50.640+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:07:50.640+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-11-27T02:07:50.661+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:07:50.661+0000] {dag.py:4156} INFO - Setting next_dagrun for capstone to None, run_after=None
+[2024-11-27T02:07:50.694+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/country_dag.py took 1.647 seconds
+[2024-11-27T02:08:21.470+0000] {processor.py:186} INFO - Started process (PID=5286) to work on /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:08:21.472+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/country_dag.py for tasks to queue
+[2024-11-27T02:08:21.474+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:08:21.473+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:08:22.620+0000] {processor.py:925} INFO - DAG(s) 'capstone' retrieved from /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:08:22.703+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:08:22.703+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-11-27T02:08:22.723+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:08:22.722+0000] {dag.py:4156} INFO - Setting next_dagrun for capstone to None, run_after=None
+[2024-11-27T02:08:22.761+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/country_dag.py took 1.301 seconds
+[2024-11-27T02:08:53.365+0000] {processor.py:186} INFO - Started process (PID=5296) to work on /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:08:53.366+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/country_dag.py for tasks to queue
+[2024-11-27T02:08:53.368+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:08:53.368+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:08:54.697+0000] {processor.py:925} INFO - DAG(s) 'capstone' retrieved from /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:08:54.764+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:08:54.763+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-11-27T02:08:54.779+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:08:54.778+0000] {dag.py:4156} INFO - Setting next_dagrun for capstone to None, run_after=None
+[2024-11-27T02:08:54.811+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/country_dag.py took 1.454 seconds
+[2024-11-27T02:09:24.916+0000] {processor.py:186} INFO - Started process (PID=5306) to work on /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:09:24.918+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/capstone_airflow/country_dag.py for tasks to queue
+[2024-11-27T02:09:24.920+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:09:24.919+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:09:26.233+0000] {processor.py:925} INFO - DAG(s) 'capstone' retrieved from /opt/airflow/dags/capstone_airflow/country_dag.py
+[2024-11-27T02:09:26.302+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:09:26.302+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2024-11-27T02:09:26.335+0000] {logging_mixin.py:190} INFO - [2024-11-27T02:09:26.334+0000] {dag.py:4156} INFO - Setting next_dagrun for capstone to None, run_after=None
+[2024-11-27T02:09:26.379+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/capstone_airflow/country_dag.py took 1.471 seconds
