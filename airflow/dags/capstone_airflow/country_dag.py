@@ -1,14 +1,15 @@
 from datetime import datetime, timedelta
 
-
 from airflow import DAG
+
 from airflow.operators.python_operator import PythonOperator
 from capstone_airflow.function.data_to_database import load_to_database
 from capstone_airflow.function.extract_columns import column_selections
-from capstone_airflow.function.extract_currency import (currency_code_symbol, currency_name)
+from capstone_airflow.function.extract_currency import (currency_code_symbol,
+                                                        currency_name)
 from capstone_airflow.function.extract_languages import languages
-from capstone_airflow.function.extract_load_to_s3 import (country_api_request,
-                                         country_to_s3_parquet)
+from capstone_airflow.function.extract_load_to_s3 import (
+    country_api_request, country_to_s3_parquet)
 from capstone_airflow.function.joining import tables_joining
 from capstone_airflow.function.load_from_s3 import read_s3_parquet
 from capstone_airflow.function.transformation import table_transformation
