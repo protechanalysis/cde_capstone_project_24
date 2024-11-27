@@ -21,8 +21,9 @@ The goal of this project is to design and implement a scalable data platform tha
 -   Data Extraction: Pulling data from the REST API.
 -   Data Storage: Storing raw API data in S3 (Parquet format).
 -   Data Transformation: Extracting required fields and writing to the Amazon RDS.
--   Modeling: Using DBT to structure data into fact and dimension tables.
 -   Orchestration: Managed using Apache Airflow.
+-   Modeling: Using DBT to structure data into fact and dimension tables.
+
 
 #### Features
 -   Automated data pipeline orchestration using Airflow.
@@ -70,9 +71,9 @@ The goal of this project is to design and implement a scalable data platform tha
 
 #### Infrastructure as Code
 - Terraform:
-Automates the provisioning of cloud resources (S3 buckets, RDS, IAM roles).
-Ensures consistency and version control for infrastructure.
-Manages Terraform state in a cloud-based backend for collaboration and scalability.
+    - Automates the provisioning of cloud resources (S3 buckets, RDS).
+    - Ensures consistency and version control for infrastructure.
+    - Manages Terraform state in a cloud-based backend for collaboration and scalability.
 
 #### CI/CD
 - GitHub Actions:
